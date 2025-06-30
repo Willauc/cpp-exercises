@@ -8,8 +8,12 @@
   ========================================================================
 */
 #include <iostream>
+#include "src/structure_donnee/My_Array.h"
 
 int main() {
-    std::cout << "Bonjour, monde !" << std::endl;
+    My_Array array(0);
+    array.insert(10);
+    array.insert(20);
+    array.print();
     return 0;
 }

@@ -7,5 +7,7 @@ set(CMAKE_CXX_STANDARD 17)
 add_executable(affichage_matrice
         main.cpp
         src/affichage_matrice.cpp
+        src/structure_donnee/My_Array.cpp
+        src/structure_donnee/My_Array.h
 
 )

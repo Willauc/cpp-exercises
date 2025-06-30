@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2024.1.1/bin/ninja/win/x64/ninja.exe" -G Ninja -S C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises -B C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug
--- Configuring done (0.2s)
+/snap/clion/359/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "Unix Makefiles" -S /home/william/Documents/GitHub/cpp-exercises -B /home/william/Documents/GitHub/cpp-exercises/cmake-build-debug
+-- Configuring done (0.0s)
 -- Generating done (0.0s)
--- Build files have been written to: C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/cmake-build-debug
+-- Build files have been written to: /home/william/Documents/GitHub/cpp-exercises/cmake-build-debug
