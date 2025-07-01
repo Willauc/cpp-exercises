@@ -41,43 +41,61 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target affichage_matrice
+# Object build statements for EXECUTABLE target main
 
 
 #############################################
-# Order-only phony target for affichage_matrice
+# Order-only phony target for main
 
-build cmake_object_order_depends_target_affichage_matrice: phony || CMakeFiles/affichage_matrice.dir
+build cmake_object_order_depends_target_main: phony || CMakeFiles/main.dir
 
-build CMakeFiles/affichage_matrice.dir/diver/affichage_matrice.cpp.obj: CXX_COMPILER__affichage_matrice_unscanned_Debug C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/diver/affichage_matrice.cpp || cmake_object_order_depends_target_affichage_matrice
-  DEP_FILE = CMakeFiles\affichage_matrice.dir\diver\affichage_matrice.cpp.obj.d
+build CMakeFiles/main.dir/main.cpp.obj: CXX_COMPILER__main_unscanned_Debug C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/main.cpp || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles\main.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\affichage_matrice.dir
-  OBJECT_FILE_DIR = CMakeFiles\affichage_matrice.dir\diver
+  OBJECT_DIR = CMakeFiles\main.dir
+  OBJECT_FILE_DIR = CMakeFiles\main.dir
 
-build CMakeFiles/affichage_matrice.dir/main.cpp.obj: CXX_COMPILER__affichage_matrice_unscanned_Debug C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/main.cpp || cmake_object_order_depends_target_affichage_matrice
-  DEP_FILE = CMakeFiles\affichage_matrice.dir\main.cpp.obj.d
+build CMakeFiles/main.dir/src/affichage_matrice.cpp.obj: CXX_COMPILER__main_unscanned_Debug C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/src/affichage_matrice.cpp || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles\main.dir\src\affichage_matrice.cpp.obj.d
   FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\affichage_matrice.dir
-  OBJECT_FILE_DIR = CMakeFiles\affichage_matrice.dir
+  OBJECT_DIR = CMakeFiles\main.dir
+  OBJECT_FILE_DIR = CMakeFiles\main.dir\src
+
+build CMakeFiles/main.dir/src/structure_donnee/My_Array.cpp.obj: CXX_COMPILER__main_unscanned_Debug C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/src/structure_donnee/My_Array.cpp || cmake_object_order_depends_target_main
+  DEP_FILE = CMakeFiles\main.dir\src\structure_donnee\My_Array.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\main.dir
+  OBJECT_FILE_DIR = CMakeFiles\main.dir\src\structure_donnee
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target affichage_matrice
+# Link build statements for EXECUTABLE target main
 
 
 #############################################
-# Link the executable affichage_matrice.exe
+# Link the executable main.exe
 
-build affichage_matrice.exe: CXX_EXECUTABLE_LINKER__affichage_matrice_Debug CMakeFiles/affichage_matrice.dir/diver/affichage_matrice.cpp.obj CMakeFiles/affichage_matrice.dir/main.cpp.obj
+build main.exe: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/main.cpp.obj CMakeFiles/main.dir/src/affichage_matrice.cpp.obj CMakeFiles/main.dir/src/structure_donnee/My_Array.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\affichage_matrice.dir
+  OBJECT_DIR = CMakeFiles\main.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = affichage_matrice.exe
-  TARGET_IMPLIB = libaffichage_matrice.dll.a
-  TARGET_PDB = affichage_matrice.exe.dbg
+  TARGET_FILE = main.exe
+  TARGET_IMPLIB = libmain.dll.a
+  TARGET_PDB = main.exe.dbg
+
+
+#############################################
+# Utility command for test
+
+build CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\ctest.exe" --force-new-ctest-process "
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build test: phony CMakeFiles/test.util
 
 
 #############################################
@@ -102,10 +120,569 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
+
+#############################################
+# Utility command for list_install_components
+
+build list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build CMakeFiles/install.util: CUSTOM_COMMAND all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build install: phony CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build CMakeFiles/install/local.util: CUSTOM_COMMAND all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build install/local: phony CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build install/strip: phony CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/CMakeLists.txt
+# =============================================================================
+
+
+#############################################
+# Utility command for test
+
+build extern/googletest/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\extern\googletest && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\ctest.exe" --force-new-ctest-process "
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build extern/googletest/test: phony extern/googletest/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build extern/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\extern\googletest && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build extern/googletest/edit_cache: phony extern/googletest/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build extern/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\extern\googletest && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises -BC:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build extern/googletest/rebuild_cache: phony extern/googletest/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build extern/googletest/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build extern/googletest/CMakeFiles/install.util: CUSTOM_COMMAND extern/googletest/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\extern\googletest && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build extern/googletest/install: phony extern/googletest/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build extern/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND extern/googletest/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\extern\googletest && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build extern/googletest/install/local: phony extern/googletest/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build extern/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND extern/googletest/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\extern\googletest && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build extern/googletest/install/strip: phony extern/googletest/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Order-only phony target for gmock
+
+build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depends_target_gtest
+
+build extern/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj: CXX_COMPILER__gmock_unscanned_Debug C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
+  DEP_FILE = extern\googletest\googlemock\CMakeFiles\gmock.dir\src\gmock-all.cc.obj.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -IC:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googlemock/include -IC:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googlemock -isystem C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/include -isystem C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest
+  OBJECT_DIR = extern\googletest\googlemock\CMakeFiles\gmock.dir
+  OBJECT_FILE_DIR = extern\googletest\googlemock\CMakeFiles\gmock.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock
+
+
+#############################################
+# Link the static library lib\libgmock.a
+
+build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug extern/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.obj || lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = extern\googletest\googlemock\CMakeFiles\gmock.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\libgmock.a
+  TARGET_PDB = gmock.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Order-only phony target for gmock_main
+
+build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gtest
+
+build extern/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj: CXX_COMPILER__gmock_main_unscanned_Debug C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
+  DEP_FILE = extern\googletest\googlemock\CMakeFiles\gmock_main.dir\src\gmock_main.cc.obj.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -isystem C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googlemock/include -isystem C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googlemock -isystem C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/include -isystem C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest
+  OBJECT_DIR = extern\googletest\googlemock\CMakeFiles\gmock_main.dir
+  OBJECT_FILE_DIR = extern\googletest\googlemock\CMakeFiles\gmock_main.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gmock_main
+
+
+#############################################
+# Link the static library lib\libgmock_main.a
+
+build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug extern/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.obj || lib/libgmock.a lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = extern\googletest\googlemock\CMakeFiles\gmock_main.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\libgmock_main.a
+  TARGET_PDB = gmock_main.a.dbg
+
+
+#############################################
+# Utility command for test
+
+build extern/googletest/googlemock/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\extern\googletest\googlemock && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\ctest.exe" --force-new-ctest-process "
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build extern/googletest/googlemock/test: phony extern/googletest/googlemock/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build extern/googletest/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\extern\googletest\googlemock && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build extern/googletest/googlemock/edit_cache: phony extern/googletest/googlemock/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build extern/googletest/googlemock/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\extern\googletest\googlemock && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises -BC:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build extern/googletest/googlemock/rebuild_cache: phony extern/googletest/googlemock/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build extern/googletest/googlemock/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build extern/googletest/googlemock/CMakeFiles/install.util: CUSTOM_COMMAND extern/googletest/googlemock/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\extern\googletest\googlemock && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build extern/googletest/googlemock/install: phony extern/googletest/googlemock/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build extern/googletest/googlemock/CMakeFiles/install/local.util: CUSTOM_COMMAND extern/googletest/googlemock/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\extern\googletest\googlemock && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build extern/googletest/googlemock/install/local: phony extern/googletest/googlemock/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build extern/googletest/googlemock/CMakeFiles/install/strip.util: CUSTOM_COMMAND extern/googletest/googlemock/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\extern\googletest\googlemock && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build extern/googletest/googlemock/install/strip: phony extern/googletest/googlemock/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googlemock/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Order-only phony target for gtest
+
+build cmake_object_order_depends_target_gtest: phony || extern/googletest/googletest/CMakeFiles/gtest.dir
+
+build extern/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj: CXX_COMPILER__gtest_unscanned_Debug C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
+  DEP_FILE = extern\googletest\googletest\CMakeFiles\gtest.dir\src\gtest-all.cc.obj.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -IC:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/include -IC:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest
+  OBJECT_DIR = extern\googletest\googletest\CMakeFiles\gtest.dir
+  OBJECT_FILE_DIR = extern\googletest\googletest\CMakeFiles\gtest.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest
+
+
+#############################################
+# Link the static library lib\libgtest.a
+
+build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug extern/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.obj
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = extern\googletest\googletest\CMakeFiles\gtest.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\libgtest.a
+  TARGET_PDB = gtest.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Order-only phony target for gtest_main
+
+build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_depends_target_gtest
+
+build extern/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj: CXX_COMPILER__gtest_main_unscanned_Debug C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
+  DEP_FILE = extern\googletest\googletest\CMakeFiles\gtest_main.dir\src\gtest_main.cc.obj.d
+  FLAGS = -g -std=c++17 -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=0 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -isystem C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/include -isystem C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest
+  OBJECT_DIR = extern\googletest\googletest\CMakeFiles\gtest_main.dir
+  OBJECT_FILE_DIR = extern\googletest\googletest\CMakeFiles\gtest_main.dir\src
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target gtest_main
+
+
+#############################################
+# Link the static library lib\libgtest_main.a
+
+build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug extern/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.obj || lib/libgtest.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = extern\googletest\googletest\CMakeFiles\gtest_main.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = lib\libgtest_main.a
+  TARGET_PDB = gtest_main.a.dbg
+
+
+#############################################
+# Utility command for test
+
+build extern/googletest/googletest/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\extern\googletest\googletest && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\ctest.exe" --force-new-ctest-process "
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build extern/googletest/googletest/test: phony extern/googletest/googletest/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build extern/googletest/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\extern\googletest\googletest && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build extern/googletest/googletest/edit_cache: phony extern/googletest/googletest/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build extern/googletest/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\extern\googletest\googletest && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises -BC:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build extern/googletest/googletest/rebuild_cache: phony extern/googletest/googletest/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build extern/googletest/googletest/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build extern/googletest/googletest/CMakeFiles/install.util: CUSTOM_COMMAND extern/googletest/googletest/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\extern\googletest\googletest && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build extern/googletest/googletest/install: phony extern/googletest/googletest/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build extern/googletest/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND extern/googletest/googletest/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\extern\googletest\googletest && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build extern/googletest/googletest/install/local: phony extern/googletest/googletest/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build extern/googletest/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND extern/googletest/googletest/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\extern\googletest\googletest && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build extern/googletest/googletest/install/strip: phony extern/googletest/googletest/CMakeFiles/install/strip.util
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target tests
+
+
+#############################################
+# Order-only phony target for tests
+
+build cmake_object_order_depends_target_tests: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
+
+build tests/CMakeFiles/tests.dir/test_my_array.cpp.obj: CXX_COMPILER__tests_unscanned_Debug C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/tests/test_my_array.cpp || cmake_object_order_depends_target_tests
+  DEP_FILE = tests\CMakeFiles\tests.dir\test_my_array.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/src -isystem C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/include -isystem C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest
+  OBJECT_DIR = tests\CMakeFiles\tests.dir
+  OBJECT_FILE_DIR = tests\CMakeFiles\tests.dir
+
+build tests/CMakeFiles/tests.dir/__/src/structure_donnee/My_Array.cpp.obj: CXX_COMPILER__tests_unscanned_Debug C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/src/structure_donnee/My_Array.cpp || cmake_object_order_depends_target_tests
+  DEP_FILE = tests\CMakeFiles\tests.dir\__\src\structure_donnee\My_Array.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/src -isystem C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/include -isystem C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest
+  OBJECT_DIR = tests\CMakeFiles\tests.dir
+  OBJECT_FILE_DIR = tests\CMakeFiles\tests.dir\__\src\structure_donnee
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target tests
+
+
+#############################################
+# Link the executable tests\tests.exe
+
+build tests/tests.exe: CXX_EXECUTABLE_LINKER__tests_Debug tests/CMakeFiles/tests.dir/test_my_array.cpp.obj tests/CMakeFiles/tests.dir/__/src/structure_donnee/My_Array.cpp.obj | lib/libgtest.a lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
+  FLAGS = -g
+  LINK_LIBRARIES = lib/libgtest.a  lib/libgtest_main.a  -lpthread  lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = tests\CMakeFiles\tests.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = tests\tests.exe
+  TARGET_IMPLIB = tests\libtests.dll.a
+  TARGET_PDB = tests.exe.dbg
+
+
+#############################################
+# Utility command for test
+
+build tests/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\tests && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\ctest.exe" --force-new-ctest-process "
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build tests/test: phony tests/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build tests/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\tests && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build tests/edit_cache: phony tests/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build tests/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\tests && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" --regenerate-during-build -SC:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises -BC:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug"
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build tests/rebuild_cache: phony tests/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for list_install_components
+
+build tests/list_install_components: phony
+
+
+#############################################
+# Utility command for install
+
+build tests/CMakeFiles/install.util: CUSTOM_COMMAND tests/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\tests && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -P cmake_install.cmake"
+  DESC = Install the project...
+  pool = console
+  restat = 1
+
+build tests/install: phony tests/CMakeFiles/install.util
+
+
+#############################################
+# Utility command for install/local
+
+build tests/CMakeFiles/install/local.util: CUSTOM_COMMAND tests/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\tests && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  DESC = Installing only the local directory...
+  pool = console
+  restat = 1
+
+build tests/install/local: phony tests/CMakeFiles/install/local.util
+
+
+#############################################
+# Utility command for install/strip
+
+build tests/CMakeFiles/install/strip.util: CUSTOM_COMMAND tests/all
+  COMMAND = C:\WINDOWS\system32\cmd.exe /C "cd /D C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\cmake-build-debug\tests && "C:\Program Files\JetBrains\CLion 2024.1.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake"
+  DESC = Installing the project stripped...
+  pool = console
+  restat = 1
+
+build tests/install/strip: phony tests/CMakeFiles/install/strip.util
+
 # =============================================================================
 # Target aliases.
 
-build affichage_matrice: phony affichage_matrice.exe
+build gmock: phony lib/libgmock.a
+
+build gmock_main: phony lib/libgmock_main.a
+
+build gtest: phony lib/libgtest.a
+
+build gtest_main: phony lib/libgtest_main.a
+
+build libgmock.a: phony lib/libgmock.a
+
+build libgmock_main.a: phony lib/libgmock_main.a
+
+build libgtest.a: phony lib/libgtest.a
+
+build libgtest_main.a: phony lib/libgtest_main.a
+
+build main: phony main.exe
+
+build tests: phony tests/tests.exe
+
+build tests.exe: phony tests/tests.exe
 
 # =============================================================================
 # Folder targets.
@@ -115,7 +692,35 @@ build affichage_matrice: phony affichage_matrice.exe
 #############################################
 # Folder: C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/cmake-build-debug
 
-build all: phony affichage_matrice.exe
+build all: phony main.exe extern/googletest/all tests/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/cmake-build-debug/extern/googletest
+
+build extern/googletest/all: phony extern/googletest/googlemock/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/cmake-build-debug/extern/googletest/googlemock
+
+build extern/googletest/googlemock/all: phony lib/libgmock.a lib/libgmock_main.a extern/googletest/googletest/all
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/cmake-build-debug/extern/googletest/googletest
+
+build extern/googletest/googletest/all: phony lib/libgtest.a lib/libgtest_main.a
+
+# =============================================================================
+
+#############################################
+# Folder: C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/cmake-build-debug/tests
+
+build tests/all: phony tests/tests.exe
 
 # =============================================================================
 # Built-in targets
@@ -124,14 +729,14 @@ build all: phony affichage_matrice.exe
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDependentOption.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/CMakeLists.txt C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/CMakeLists.txt C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googlemock/CMakeLists.txt C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googlemock/cmake/gmock.pc.in C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googlemock/cmake/gmock_main.pc.in C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/CMakeLists.txt C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/cmake/Config.cmake.in C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/cmake/gtest.pc.in C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/cmake/gtest_main.pc.in C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/cmake/internal_utils.cmake C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/tests/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
+build C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeDependentOption.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-Initialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/JetBrains/CLion$ 2024.1.1/bin/cmake/win/x64/share/cmake-3.28/Modules/WriteBasicConfigVersionFile.cmake C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/CMakeLists.txt C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/CMakeLists.txt C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googlemock/CMakeLists.txt C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googlemock/cmake/gmock.pc.in C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googlemock/cmake/gmock_main.pc.in C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/CMakeLists.txt C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/cmake/Config.cmake.in C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/cmake/gtest.pc.in C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/cmake/gtest_main.pc.in C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/cmake/internal_utils.cmake C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/tests/CMakeLists.txt CMakeCache.txt CMakeFiles/3.28.1/CMakeCCompiler.cmake CMakeFiles/3.28.1/CMakeCXXCompiler.cmake CMakeFiles/3.28.1/CMakeRCCompiler.cmake CMakeFiles/3.28.1/CMakeSystem.cmake: phony
 
 
 #############################################

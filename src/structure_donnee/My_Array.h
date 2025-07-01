@@ -12,7 +12,6 @@
 
 #ifndef MY_ARRAY_H
 #define MY_ARRAY_H
-#include <array>
 
 
 class My_Array {
@@ -30,8 +29,22 @@ public:
 
     void removeAt(int index);
 
+    int get(int index);
+
+    int get_capacity();
+
+    int get_count();
+
     int indexOf(int value);
 
     void print();
+
+    int max();
+
+    My_Array intersect();
+
+    My_Array reverse();
+
+    void insertAt();
 };
 #endif

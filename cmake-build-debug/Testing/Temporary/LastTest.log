@@ -1,3 +1,37 @@
-Start testing: Jun 30 16:27 EDT
+Start testing: Jul 01 10:46 Est (heure d’été)
 ----------------------------------------------------------
-End testing: Jun 30 16:27 EDT
+1/1 Testing: MyArrayTest
+1/1 Test: MyArrayTest
+Command: "C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/cmake-build-debug/tests/tests.exe"
+Directory: C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/cmake-build-debug/tests
+"MyArrayTest" start time: Jul 01 10:46 Est (heure d’été)
+Output:
+----------------------------------------------------------
+Running main() from C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/src/gtest_main.cc
+[==========] Running 5 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 5 tests from MyArrayTest
+[ RUN      ] MyArrayTest.InsertAndGet
+[       OK ] MyArrayTest.InsertAndGet (0 ms)
+[ RUN      ] MyArrayTest.InsertAndGetThrow
+[       OK ] MyArrayTest.InsertAndGetThrow (0 ms)
+[ RUN      ] MyArrayTest.removeAt
+[       OK ] MyArrayTest.removeAt (0 ms)
+[ RUN      ] MyArrayTest.removeAtThrow
+[       OK ] MyArrayTest.removeAtThrow (0 ms)
+[ RUN      ] MyArrayTest.indexOf
+[       OK ] MyArrayTest.indexOf (0 ms)
+[----------] 5 tests from MyArrayTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 5 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 5 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"MyArrayTest" end time: Jul 01 10:46 Est (heure d’été)
+"MyArrayTest" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jul 01 10:46 Est (heure d’été)
