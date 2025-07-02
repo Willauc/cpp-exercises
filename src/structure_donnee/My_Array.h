@@ -21,9 +21,9 @@ private:
     int m_capacity;
 
 public:
-    My_Array(int capacity);
+    explicit My_Array(int capacity);
 
-    My_Array(const My_Array& other);
+    My_Array(const My_Array &other);
 
     ~My_Array();
 
@@ -31,22 +31,22 @@ public:
 
     void removeAt(int index);
 
-    int get(int index) const;
+    [[nodiscard]] int get(int index) const;
 
-    int get_capacity() const;
+    [[nodiscard]] int get_capacity() const;
 
-    int get_count() const ;
+    [[nodiscard]] int get_count() const;
 
-    int indexOf(int value) const ;
+    [[nodiscard]] int indexOf(int value) const;
 
-    void print() const ;
+    void print() const;
 
-    int max() const ;
+    [[nodiscard]] int max() const;
 
-    My_Array intersect(const My_Array& second) const;
+    [[nodiscard]] My_Array intersect(const My_Array &second) const;
 
     void reverse();
 
-    void insertAt();
+    void insertAt(int value, int index);
 };
 #endif

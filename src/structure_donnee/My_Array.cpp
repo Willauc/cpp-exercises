@@ -13,7 +13,7 @@
 #include "My_Array.h"
 #include <iostream>
 
-My_Array::My_Array(int capacity) : m_count(0), m_capacity (capacity) {
+My_Array::My_Array(int capacity) : m_count(0), m_capacity(capacity) {
     if (capacity > 0) {
         m_array = new int[capacity];
     } else {
@@ -23,9 +23,9 @@ My_Array::My_Array(int capacity) : m_count(0), m_capacity (capacity) {
     }
 }
 
-My_Array::My_Array(const My_Array& other) : m_count(other.get_count()), m_capacity(other.get_capacity()) {
+My_Array::My_Array(const My_Array &other) : m_count(other.get_count()), m_capacity(other.get_capacity()) {
     m_array = new int[m_capacity];
-    for (int i = 0; i < other.get_count() ; ++i) {
+    for (int i = 0; i < other.get_count(); ++i) {
         m_array[i] = other.get(i);
     }
 }
@@ -37,7 +37,7 @@ My_Array::~My_Array() {
 void My_Array::insert(int value) {
     if (m_capacity == m_count) {
         m_capacity *= 2;
-        int *temp = new int[m_capacity];
+        auto *temp = new int[m_capacity];
         for (int i = 0; i < m_count; i++) {
             temp[i] = m_array[i];
         }
@@ -60,7 +60,7 @@ void My_Array::removeAt(int index) {
 
     if ((m_capacity / 2) > m_count) {
         m_capacity = m_capacity / 2;
-        int *temp = new int[m_capacity];
+        auto *temp = new int[m_capacity];
         for (int i = 0; i < m_count; i++) {
             temp[i] = m_array[i];
         }
@@ -110,7 +110,7 @@ int My_Array::max() const {
     return max;
 }
 
-My_Array My_Array::intersect(const My_Array& second) const {
+My_Array My_Array::intersect(const My_Array &second) const {
     My_Array commun(0);
     for (int i = 0; i < m_count; i++) {
         if (second.indexOf(m_array[i]) != -1) {
@@ -121,7 +121,7 @@ My_Array My_Array::intersect(const My_Array& second) const {
 }
 
 void My_Array::reverse() {
-    int *temp = new int[m_capacity];
+    auto *temp = new int[m_capacity];
     int index = 0;
     for (int i = m_count - 1; i >= 0; i--) {
         temp[index] = m_array[i];
@@ -131,5 +131,27 @@ void My_Array::reverse() {
     m_array = temp;
 }
 
-void My_Array::insertAt() {
+void My_Array::insertAt(int value, int index) {
+    if (index < 0 || index >= m_count) {
+        throw std::out_of_range("Index hors tableau.");
+    }
+    if (m_capacity == m_count + 1) {
+        m_capacity *= 2;
+    }
+    auto *temp = new int[m_capacity];
+    bool value_inserted = false;
+    int index2 = 0;
+    for (int i = 0; i < m_count; i++) {
+        if (i == index && not value_inserted) {
+            temp[index2] = value;
+            value_inserted = true;
+            index2++;
+        }
+
+        temp[index2] = m_array[i];
+        index2++;
+    }
+    m_count++;
+    delete[] m_array;
+    m_array = temp;
 }

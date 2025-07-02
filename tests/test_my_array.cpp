@@ -121,3 +121,30 @@ TEST(MyArrayTest, intersect) {
     EXPECT_EQ(arr_3.get(0), 69);
     EXPECT_EQ(arr_3.get_count(), 1);
 }
+
+TEST(My_arrayTest, insertAt) {
+    My_Array arr(0);
+    arr.insert(42);
+    arr.insert(55);
+    arr.insert(69);
+
+    arr.insertAt(132, 0);
+    EXPECT_EQ(arr.get(0), 132);
+
+    arr.insertAt(44, 3);
+    EXPECT_EQ(arr.get(3), 44);
+
+    arr.insertAt(44, 4);
+    EXPECT_EQ(arr.get(4), 44);
+    EXPECT_EQ(arr.get(5), 69);
+}
+
+TEST(My_arrayTest, insertAtThrow) {
+    My_Array arr(0);
+    arr.insert(42);
+    arr.insert(55);
+    arr.insert(69);
+
+    EXPECT_ANY_THROW(arr.insertAt(123, -1));
+    EXPECT_ANY_THROW(arr.insertAt(123, 3));
+}
