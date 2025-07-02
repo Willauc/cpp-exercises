@@ -105,3 +105,19 @@ TEST(MyArrayTest, reverse) {
     EXPECT_EQ(arr.get(1), arr_reversed.get(1));
     EXPECT_EQ(arr.get(2), arr_reversed.get(2));
 }
+
+TEST(MyArrayTest, intersect) {
+    My_Array arr(0);
+    arr.insert(42);
+    arr.insert(55);
+    arr.insert(69);
+
+    My_Array arr_2(0);
+    arr_2.insert(69);
+    arr_2.insert(52);
+    arr_2.insert(32);
+
+    My_Array arr_3(arr.intersect(arr_2));
+    EXPECT_EQ(arr_3.get(0), 69);
+    EXPECT_EQ(arr_3.get_count(), 1);
+}

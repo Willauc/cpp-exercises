@@ -23,25 +23,27 @@ private:
 public:
     My_Array(int capacity);
 
+    My_Array(const My_Array& other);
+
     ~My_Array();
 
     void insert(int value);
 
     void removeAt(int index);
 
-    int get(int index);
+    int get(int index) const;
 
-    int get_capacity();
+    int get_capacity() const;
 
-    int get_count();
+    int get_count() const ;
 
-    int indexOf(int value);
+    int indexOf(int value) const ;
 
-    void print();
+    void print() const ;
 
-    int max();
+    int max() const ;
 
-    My_Array intersect();
+    My_Array intersect(const My_Array& second) const;
 
     void reverse();
 

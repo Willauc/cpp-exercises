@@ -13,15 +13,20 @@
 #include "My_Array.h"
 #include <iostream>
 
-My_Array::My_Array(int capacity) {
+My_Array::My_Array(int capacity) : m_count(0), m_capacity (capacity) {
     if (capacity > 0) {
         m_array = new int[capacity];
-        m_count = 0;
-        m_capacity = capacity;
     } else {
         m_array = new int[1];
         m_count = 0;
         m_capacity = 1;
+    }
+}
+
+My_Array::My_Array(const My_Array& other) : m_count(other.get_count()), m_capacity(other.get_capacity()) {
+    m_array = new int[m_capacity];
+    for (int i = 0; i < other.get_count() ; ++i) {
+        m_array[i] = other.get(i);
     }
 }
 
@@ -64,7 +69,7 @@ void My_Array::removeAt(int index) {
     }
 }
 
-int My_Array::get(int index) {
+int My_Array::get(int index) const {
     if (index < 0 || index >= m_count) {
         throw std::out_of_range("Index hors tableau.");
     }
@@ -72,15 +77,15 @@ int My_Array::get(int index) {
     return m_array[index];
 }
 
-int My_Array::get_capacity() {
+int My_Array::get_capacity() const {
     return m_capacity;
 }
 
-int My_Array::get_count() {
+int My_Array::get_count() const {
     return m_count;
 }
 
-int My_Array::indexOf(int value) {
+int My_Array::indexOf(int value) const {
     for (int i = 0; i < m_count; i++) {
         if (m_array[i] == value) {
             return i;
@@ -89,13 +94,13 @@ int My_Array::indexOf(int value) {
     return -1;
 }
 
-void My_Array::print() {
+void My_Array::print() const {
     for (int i = 0; i < m_count; i++) {
         std::cout << m_array[i] << std::endl;
     }
 }
 
-int My_Array::max() {
+int My_Array::max() const {
     int max = m_array[0];
     for (int i = 1; i < m_count; i++) {
         if (m_array[i] > max) {
@@ -105,8 +110,14 @@ int My_Array::max() {
     return max;
 }
 
-My_Array My_Array::intersect() {
-    return My_Array(0);
+My_Array My_Array::intersect(const My_Array& second) const {
+    My_Array commun(0);
+    for (int i = 0; i < m_count; i++) {
+        if (second.indexOf(m_array[i]) != -1) {
+            commun.insert(m_array[i]);
+        }
+    }
+    return commun;
 }
 
 void My_Array::reverse() {

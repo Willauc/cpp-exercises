@@ -17,7 +17,11 @@ int main() {
     array.insert(30);
     array.insert(40);
     array.insert(50);
-    array.reverse();
-    array.print();
+
+    My_Array second(0);
+    second.insert(10);
+
+    My_Array commun(array.intersect(second));
+    commun.print();
     return 0;
 }
