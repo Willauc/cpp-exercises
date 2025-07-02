@@ -12,13 +12,12 @@
 
 int main() {
     My_Array array(0);
-    std::cout << "capacity:" << array.get_capacity() << std::endl;
     array.insert(10);
-    std::cout << "capacity:" << array.get_capacity() << std::endl;
     array.insert(20);
-    std::cout << "capacity:" << array.get_capacity() << std::endl;
-    //array.print();
-    array.removeAt(0);
+    array.insert(30);
+    array.insert(40);
+    array.insert(50);
+    array.reverse();
     array.print();
     return 0;
 }

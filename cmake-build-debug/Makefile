@@ -65,6 +65,16 @@ CMAKE_BINARY_DIR = /home/william/Documents/GitHub/cpp-exercises/cmake-build-debu
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	/snap/clion/359/bin/cmake/linux/x64/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
@@ -84,6 +94,51 @@ rebuild_cache:
 # Special rule for the target rebuild_cache
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"gmock\" \"gtest\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/snap/clion/359/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Install the project..."
+	/snap/clion/359/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/snap/clion/359/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing only the local directory..."
+	/snap/clion/359/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/snap/clion/359/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Installing the project stripped..."
+	/snap/clion/359/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -117,24 +172,89 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named affichage_matrice
+# Target rules for targets named main
 
 # Build rule for target.
-affichage_matrice: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 affichage_matrice
-.PHONY : affichage_matrice
+main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 main
+.PHONY : main
 
 # fast build rule for target.
-affichage_matrice/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/affichage_matrice.dir/build.make CMakeFiles/affichage_matrice.dir/build
-.PHONY : affichage_matrice/fast
+main/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
+.PHONY : main/fast
+
+#=============================================================================
+# Target rules for targets named gmock
+
+# Build rule for target.
+gmock: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
+.PHONY : gmock
+
+# fast build rule for target.
+gmock/fast:
+	$(MAKE) $(MAKESILENT) -f extern/googletest/googlemock/CMakeFiles/gmock.dir/build.make extern/googletest/googlemock/CMakeFiles/gmock.dir/build
+.PHONY : gmock/fast
+
+#=============================================================================
+# Target rules for targets named gmock_main
+
+# Build rule for target.
+gmock_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
+.PHONY : gmock_main
+
+# fast build rule for target.
+gmock_main/fast:
+	$(MAKE) $(MAKESILENT) -f extern/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make extern/googletest/googlemock/CMakeFiles/gmock_main.dir/build
+.PHONY : gmock_main/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) $(MAKESILENT) -f extern/googletest/googletest/CMakeFiles/gtest.dir/build.make extern/googletest/googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) $(MAKESILENT) -f extern/googletest/googletest/CMakeFiles/gtest_main.dir/build.make extern/googletest/googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+#=============================================================================
+# Target rules for targets named tests
+
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/build
+.PHONY : tests/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/affichage_matrice.dir/build.make CMakeFiles/affichage_matrice.dir/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -142,7 +262,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/affichage_matrice.dir/build.make CMakeFiles/affichage_matrice.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -150,7 +270,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/affichage_matrice.dir/build.make CMakeFiles/affichage_matrice.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 src/affichage_matrice.o: src/affichage_matrice.cpp.o
@@ -158,7 +278,7 @@ src/affichage_matrice.o: src/affichage_matrice.cpp.o
 
 # target to build an object file
 src/affichage_matrice.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/affichage_matrice.dir/build.make CMakeFiles/affichage_matrice.dir/src/affichage_matrice.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/affichage_matrice.cpp.o
 .PHONY : src/affichage_matrice.cpp.o
 
 src/affichage_matrice.i: src/affichage_matrice.cpp.i
@@ -166,7 +286,7 @@ src/affichage_matrice.i: src/affichage_matrice.cpp.i
 
 # target to preprocess a source file
 src/affichage_matrice.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/affichage_matrice.dir/build.make CMakeFiles/affichage_matrice.dir/src/affichage_matrice.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/affichage_matrice.cpp.i
 .PHONY : src/affichage_matrice.cpp.i
 
 src/affichage_matrice.s: src/affichage_matrice.cpp.s
@@ -174,7 +294,7 @@ src/affichage_matrice.s: src/affichage_matrice.cpp.s
 
 # target to generate assembly for a file
 src/affichage_matrice.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/affichage_matrice.dir/build.make CMakeFiles/affichage_matrice.dir/src/affichage_matrice.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/affichage_matrice.cpp.s
 .PHONY : src/affichage_matrice.cpp.s
 
 src/structure_donnee/My_Array.o: src/structure_donnee/My_Array.cpp.o
@@ -182,7 +302,7 @@ src/structure_donnee/My_Array.o: src/structure_donnee/My_Array.cpp.o
 
 # target to build an object file
 src/structure_donnee/My_Array.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/affichage_matrice.dir/build.make CMakeFiles/affichage_matrice.dir/src/structure_donnee/My_Array.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/structure_donnee/My_Array.cpp.o
 .PHONY : src/structure_donnee/My_Array.cpp.o
 
 src/structure_donnee/My_Array.i: src/structure_donnee/My_Array.cpp.i
@@ -190,7 +310,7 @@ src/structure_donnee/My_Array.i: src/structure_donnee/My_Array.cpp.i
 
 # target to preprocess a source file
 src/structure_donnee/My_Array.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/affichage_matrice.dir/build.make CMakeFiles/affichage_matrice.dir/src/structure_donnee/My_Array.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/structure_donnee/My_Array.cpp.i
 .PHONY : src/structure_donnee/My_Array.cpp.i
 
 src/structure_donnee/My_Array.s: src/structure_donnee/My_Array.cpp.s
@@ -198,7 +318,7 @@ src/structure_donnee/My_Array.s: src/structure_donnee/My_Array.cpp.s
 
 # target to generate assembly for a file
 src/structure_donnee/My_Array.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/affichage_matrice.dir/build.make CMakeFiles/affichage_matrice.dir/src/structure_donnee/My_Array.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/structure_donnee/My_Array.cpp.s
 .PHONY : src/structure_donnee/My_Array.cpp.s
 
 # Help Target
@@ -208,8 +328,18 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... install/local"
+	@echo "... install/strip"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... affichage_matrice"
+	@echo "... test"
+	@echo "... gmock"
+	@echo "... gmock_main"
+	@echo "... gtest"
+	@echo "... gtest_main"
+	@echo "... main"
+	@echo "... tests"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

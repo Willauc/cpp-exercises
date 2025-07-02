@@ -43,7 +43,7 @@ public:
 
     My_Array intersect();
 
-    My_Array reverse();
+    void reverse();
 
     void insertAt();
 };

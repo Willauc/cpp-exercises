@@ -93,19 +93,31 @@ void My_Array::print() {
     for (int i = 0; i < m_count; i++) {
         std::cout << m_array[i] << std::endl;
     }
-
-
 }
 
 int My_Array::max() {
-    return -1;
+    int max = m_array[0];
+    for (int i = 1; i < m_count; i++) {
+        if (m_array[i] > max) {
+            max = m_array[i];
+        }
+    }
+    return max;
 }
 
 My_Array My_Array::intersect() {
     return My_Array(0);
 }
 
-My_Array My_Array::reverse() {
+void My_Array::reverse() {
+    int *temp = new int[m_capacity];
+    int index = 0;
+    for (int i = m_count - 1; i >= 0; i--) {
+        temp[index] = m_array[i];
+        index++;
+    }
+    delete[] m_array;
+    m_array = temp;
 }
 
 void My_Array::insertAt() {
