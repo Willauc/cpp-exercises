@@ -8,7 +8,7 @@
   ========================================================================
 */
 #include <iostream>
-#include "src/structure_donnee/My_Array.h"
+#include "src/structure_donnee/array/My_Array.h"
 
 int main() {
     My_Array array(0);

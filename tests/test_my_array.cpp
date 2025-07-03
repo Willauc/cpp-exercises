@@ -8,7 +8,7 @@
   ========================================================================
 */
 #include <gtest/gtest.h>
-#include "structure_donnee/My_Array.h"
+#include "structure_donnee/array/My_Array.h"
 
 TEST(MyArrayTest, InsertAndGet) {
     My_Array arr(0);
@@ -122,7 +122,7 @@ TEST(MyArrayTest, intersect) {
     EXPECT_EQ(arr_3.get_count(), 1);
 }
 
-TEST(My_arrayTest, insertAt) {
+TEST(MyArrayTest, insertAt) {
     My_Array arr(0);
     arr.insert(42);
     arr.insert(55);
@@ -139,7 +139,7 @@ TEST(My_arrayTest, insertAt) {
     EXPECT_EQ(arr.get(5), 69);
 }
 
-TEST(My_arrayTest, insertAtThrow) {
+TEST(MyArrayTest, insertAtThrow) {
     My_Array arr(0);
     arr.insert(42);
     arr.insert(55);

@@ -1,6 +1,8 @@
+
 add_executable(tests
         test_my_array.cpp
-        ../src/structure_donnee/My_Array.cpp
+        ../src/structure_donnee/array/My_Array.cpp
+        test_link_list.cpp
 )
 
 target_link_libraries(tests
