@@ -15,11 +15,11 @@
 int main() {
     std::vector<std::vector<std::string>> vector = {
         {"1", "2", "3", "4"},
-        {"x", "y", "z"},
+        {"x", "y", "z",},
         {"9", "8", "7", "6"}
     };
 
-    affichage_matrice_v2(vector);
+    affichage_matrice_v3(vector);
 
 
     return 0;

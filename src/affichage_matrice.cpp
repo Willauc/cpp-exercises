@@ -67,19 +67,44 @@ void affichage_matrice_v2(const std::vector<std::vector<std::string> > &vector) 
         }
         std::cout << str << std::endl;
         if (str == str_fin) {
-                break;
-            }
+            break;
+        }
         str.clear();
 
 
         for (auto u = ranger; u >= 0; u--) {
-            if(map[u] == map_fin[u]) {
+            if (map[u] == map_fin[u]) {
                 map[u] = 0;
-                map[u-1] += 1;
-            }else if (map[u+1] != map_fin[u+1]) {
-                map[u] +=1;
+                map[u - 1] += 1;
+            } else if (map[u + 1] != map_fin[u + 1]) {
+                map[u] += 1;
             }
         }
-
     }
+}
+
+void prt_str_rec(std::string &val, const int rangerInt, const int compteInt, const
+                 std::vector<std::vector<std::string> > &vectorInt) {
+    for (auto j = 0; j <= vectorInt[compteInt].size(); j++) {
+        int val_initial = val.size();
+        if (j < vectorInt[compteInt].size()) {
+            val.append(vectorInt[compteInt][j]);
+        }
+        if (compteInt == rangerInt - 1) {
+            if(val.size() == rangerInt) {
+                std::cout << val << std::endl;
+            }
+        } else  {
+            prt_str_rec(val, rangerInt, compteInt + 1, vectorInt);
+        }
+        val.resize(val_initial);
+    }
+}
+
+void affichage_matrice_v3(const std::vector<std::vector<std::string> > &vector) {
+    const int ranger = vector.size();
+
+
+    std::string str;
+    prt_str_rec(str, ranger, 0, vector);
 }
