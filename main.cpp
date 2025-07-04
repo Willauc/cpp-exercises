@@ -8,20 +8,19 @@
   ========================================================================
 */
 #include <iostream>
-#include "src/structure_donnee/array/My_Array.h"
+#include <vector>
+
+#include "src/affichage_matrice.h"
 
 int main() {
-    My_Array array(0);
-    array.insert(10);
-    array.insert(20);
-    array.insert(30);
-    array.insert(40);
-    array.insert(50);
+    std::vector<std::vector<std::string>> vector = {
+        {"1", "2", "3", "4"},
+        {"x", "y", "z"},
+        {"9", "8", "7", "6"}
+    };
 
-    My_Array second(0);
-    second.insert(10);
+    affichage_matrice_v2(vector);
 
-    My_Array commun(array.intersect(second));
-    commun.print();
+
     return 0;
 }
