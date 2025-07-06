@@ -27,6 +27,16 @@ private:
     node<T>* last;
 
 public:
+    link_list();
+    link_list(const link_list& other);
+    ~link_list();
+    void addFirst(T value);
+    void addLast(T value);
+    void deleteFirst();
+    void deleteLast();
+    bool contains(const T& value) const;
+    int indexOf();
+
 
 
 };
