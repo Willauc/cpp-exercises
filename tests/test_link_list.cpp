@@ -11,7 +11,28 @@
 */
 
 #include <gtest/gtest.h>
+#include <structure_donnee/link_list/Link_List.h>
 
 TEST(LinkListTest, constructeur) {
-    EXPECT_EQ(1, 1);
+    EXPECT_NO_THROW(link_list<int> lst{};);
+
+
+}
+
+TEST(LinkListTest, addFirst) {
+    link_list<int> lst{};
+    lst.addFirst(1);
+    lst.addFirst(2);
+    EXPECT_EQ(lst.indexOf(2), 0);
+
+}
+
+
+TEST(LinkListTest, addLast) {
+    link_list<int> lst{};
+    lst.addFirst(1);
+    lst.addFirst(2);
+    lst.addLast(3);
+    EXPECT_EQ(lst.indexOf(3), 2);
+
 }

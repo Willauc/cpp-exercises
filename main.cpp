@@ -9,7 +9,7 @@
 */
 #include <iostream>
 #include <vector>
-
+#include "src/structure_donnee/link_list/Link_List.h"
 #include "src/affichage_matrice.h"
 
 int main() {
@@ -22,6 +22,9 @@ int main() {
 
     affichage_matrice_v3(vector);
 */
-
+link_list<int> lst;
+    lst.addFirst(1);
+    lst.addLast(2);
+    lst.indexOf(2);
     return 0;
 }

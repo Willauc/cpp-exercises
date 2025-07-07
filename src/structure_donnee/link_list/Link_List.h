@@ -16,31 +16,113 @@
 template<typename T>
 struct node {
     T value;
-    node<T>* next;
+    node<T> *next;
 };
 
 
 template<typename T>
 class link_list {
 private:
-    node<T>* first;
-    node<T>* last;
+    node<T> *first;
+    node<T> *last;
 
 public:
-    link_list();
-    link_list(const link_list& other);
-    ~link_list();
-    void addFirst(T value);
-    void addLast(T value);
-    void deleteFirst();
-    void deleteLast();
-    bool contains(const T& value) const;
-    int indexOf();
+    link_list(): first(nullptr), last(nullptr) {
+    }
+
+    link_list(const link_list &other) {
+        first = nullptr;
+        last = nullptr;
+        auto iter = other.first;
+        while (iter != nullptr) {
+            auto node = new link_list<T>(*iter);
+            addLast(node);
+            iter = iter->next;
+        }
+    }
+
+    ~link_list() {
+        while (first != nullptr) {
+            deleteFirst();
+        }
+    }
 
 
+    void addFirst(T value) {
+        auto to_Add = new node<T>{value, nullptr};
 
+        if (first == nullptr) {
+            first = last = to_Add;
+        } else {
+            to_Add->next = first;
+            first = to_Add;
+        }
+    }
+
+    void addLast(T value) {
+        auto to_Add = new node<T>{value, nullptr};
+
+        if (last == nullptr) {
+            first = last = to_Add;
+        } else {
+            last->next = to_Add;
+            last = to_Add;
+        }
+    }
+
+    void deleteFirst() {
+        if (first != nullptr) {
+            auto to_Delete = first;
+            first = to_Delete->next;
+
+            if (first == nullptr) {
+                last = nullptr;
+            }
+
+            delete to_Delete;
+        }
+    }
+
+    void deleteLast() {
+        if (last != nullptr && first != last) {
+            auto to_Delete = last;
+            auto new_last = first;
+            while (new_last->next != last) {
+                new_last = new_last->next;
+            }
+            last = new_last;
+            new_last->next = nullptr;
+            delete to_Delete;
+        } else if (last != nullptr && first == last) {
+            deleteFirst();
+        }
+    }
+
+
+    bool contains(const T &value) const {
+        auto iter = first;
+        while (iter != nullptr) {
+            if (iter->value == value) {
+                return true;
+            }
+            iter = iter->next;
+        }
+        return false;
+    }
+
+    int indexOf(const T &value) {
+        auto iter = first;
+        int index = 0;
+        while (iter != nullptr) {
+            if (iter->value == value) {
+                return index;
+            }
+            iter = iter->next;
+            index++;
+        }
+        return -1;
+    }
 };
-
 
 
 #endif //LINK_LIST_H
