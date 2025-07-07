@@ -139,12 +139,47 @@ TEST(MyArrayTest, insertAt) {
     EXPECT_EQ(arr.get(5), 69);
 }
 
-TEST(MyArrayTest, insertAtThrow) {
-    My_Array arr(0);
-    arr.insert(42);
-    arr.insert(55);
-    arr.insert(69);
 
-    EXPECT_ANY_THROW(arr.insertAt(123, -1));
-    EXPECT_ANY_THROW(arr.insertAt(123, 3));
+TEST(MyArrayTest, InsersionAuMilieux) {
+    My_Array arr(2);
+    arr.insert(10);
+    arr.insert(30);
+    arr.insertAt(20, 1);
+
+    EXPECT_EQ(arr.get(0), 10);
+    EXPECT_EQ(arr.get(1), 20);
+    EXPECT_EQ(arr.get(2), 30);
+    EXPECT_EQ(arr.get_count(), 3);
+}
+
+TEST(MyArrayTest, InsersionAuDebut) {
+    My_Array arr(2);
+    arr.insert(20);
+    arr.insert(30);
+    arr.insertAt(10, 0);
+
+    EXPECT_EQ(arr.get(0), 10);
+    EXPECT_EQ(arr.get(1), 20);
+    EXPECT_EQ(arr.get(2), 30);
+}
+
+TEST(MyArrayTest, InsersionFin) {
+    My_Array arr(2);
+    arr.insert(10);
+    arr.insert(20);
+    arr.insertAt(30, 2);
+
+    EXPECT_EQ(arr.get(0), 10);
+    EXPECT_EQ(arr.get(1), 20);
+    EXPECT_EQ(arr.get(2), 30);
+    EXPECT_EQ(arr.get_count(), 3);
+}
+
+TEST(MyArrayTest, InsertionExeption) {
+    My_Array arr(2);
+    arr.insert(10);
+    arr.insert(20);
+
+    EXPECT_THROW(arr.insertAt(5, -1), std::out_of_range);
+    EXPECT_THROW(arr.insertAt(5, 4), std::out_of_range);
 }

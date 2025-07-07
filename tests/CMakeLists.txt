@@ -2,7 +2,7 @@
 add_executable(tests
         test_my_array.cpp
         ../src/structure_donnee/array/My_Array.cpp
-        ../src/structure_donnee/link_list/Link_List.cpp
+        ../src/structure_donnee/link_list/Link_List.h
         test_link_list.cpp
 )
 

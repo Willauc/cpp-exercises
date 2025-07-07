@@ -209,30 +209,6 @@ __/src/structure_donnee/array/My_Array.cpp.s:
 	cd /home/william/Documents/GitHub/cpp-exercises/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/__/src/structure_donnee/array/My_Array.cpp.s
 .PHONY : __/src/structure_donnee/array/My_Array.cpp.s
 
-__/src/structure_donnee/link_list/Link_List.o: __/src/structure_donnee/link_list/Link_List.cpp.o
-.PHONY : __/src/structure_donnee/link_list/Link_List.o
-
-# target to build an object file
-__/src/structure_donnee/link_list/Link_List.cpp.o:
-	cd /home/william/Documents/GitHub/cpp-exercises/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/__/src/structure_donnee/link_list/Link_List.cpp.o
-.PHONY : __/src/structure_donnee/link_list/Link_List.cpp.o
-
-__/src/structure_donnee/link_list/Link_List.i: __/src/structure_donnee/link_list/Link_List.cpp.i
-.PHONY : __/src/structure_donnee/link_list/Link_List.i
-
-# target to preprocess a source file
-__/src/structure_donnee/link_list/Link_List.cpp.i:
-	cd /home/william/Documents/GitHub/cpp-exercises/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/__/src/structure_donnee/link_list/Link_List.cpp.i
-.PHONY : __/src/structure_donnee/link_list/Link_List.cpp.i
-
-__/src/structure_donnee/link_list/Link_List.s: __/src/structure_donnee/link_list/Link_List.cpp.s
-.PHONY : __/src/structure_donnee/link_list/Link_List.s
-
-# target to generate assembly for a file
-__/src/structure_donnee/link_list/Link_List.cpp.s:
-	cd /home/william/Documents/GitHub/cpp-exercises/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/__/src/structure_donnee/link_list/Link_List.cpp.s
-.PHONY : __/src/structure_donnee/link_list/Link_List.cpp.s
-
 test_link_list.o: test_link_list.cpp.o
 .PHONY : test_link_list.o
 
@@ -298,9 +274,6 @@ help:
 	@echo "... __/src/structure_donnee/array/My_Array.o"
 	@echo "... __/src/structure_donnee/array/My_Array.i"
 	@echo "... __/src/structure_donnee/array/My_Array.s"
-	@echo "... __/src/structure_donnee/link_list/Link_List.o"
-	@echo "... __/src/structure_donnee/link_list/Link_List.i"
-	@echo "... __/src/structure_donnee/link_list/Link_List.s"
 	@echo "... test_link_list.o"
 	@echo "... test_link_list.i"
 	@echo "... test_link_list.s"

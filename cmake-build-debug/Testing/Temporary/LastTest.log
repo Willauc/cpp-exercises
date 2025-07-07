@@ -1,16 +1,16 @@
-Start testing: Jul 06 20:48 EDT
+Start testing: Jul 07 19:44 EDT
 ----------------------------------------------------------
 1/1 Testing: MyStructureDonneeTest
 1/1 Test: MyStructureDonneeTest
 Command: "/home/william/Documents/GitHub/cpp-exercises/cmake-build-debug/tests/tests"
 Directory: /home/william/Documents/GitHub/cpp-exercises/cmake-build-debug/tests
-"MyStructureDonneeTest" start time: Jul 06 20:48 EDT
+"MyStructureDonneeTest" start time: Jul 07 19:44 EDT
 Output:
 ----------------------------------------------------------
 Running main() from /home/william/Documents/GitHub/cpp-exercises/extern/googletest/googletest/src/gtest_main.cc
-[==========] Running 13 tests from 2 test suites.
+[==========] Running 19 tests from 2 test suites.
 [----------] Global test environment set-up.
-[----------] 10 tests from MyArrayTest
+[----------] 13 tests from MyArrayTest
 [ RUN      ] MyArrayTest.InsertAndGet
 [       OK ] MyArrayTest.InsertAndGet (0 ms)
 [ RUN      ] MyArrayTest.InsertAndGetThrow
@@ -29,28 +29,40 @@ Running main() from /home/william/Documents/GitHub/cpp-exercises/extern/googlete
 [       OK ] MyArrayTest.intersect (0 ms)
 [ RUN      ] MyArrayTest.insertAt
 [       OK ] MyArrayTest.insertAt (0 ms)
-[ RUN      ] MyArrayTest.insertAtThrow
-[       OK ] MyArrayTest.insertAtThrow (0 ms)
-[----------] 10 tests from MyArrayTest (0 ms total)
+[ RUN      ] MyArrayTest.InsersionAuMilieux
+[       OK ] MyArrayTest.InsersionAuMilieux (0 ms)
+[ RUN      ] MyArrayTest.InsersionAuDebut
+[       OK ] MyArrayTest.InsersionAuDebut (0 ms)
+[ RUN      ] MyArrayTest.InsersionFin
+[       OK ] MyArrayTest.InsersionFin (0 ms)
+[ RUN      ] MyArrayTest.InsertionExeption
+[       OK ] MyArrayTest.InsertionExeption (0 ms)
+[----------] 13 tests from MyArrayTest (0 ms total)
 
-[----------] 3 tests from LinkListTest
+[----------] 6 tests from LinkListTest
 [ RUN      ] LinkListTest.constructeur
 [       OK ] LinkListTest.constructeur (0 ms)
 [ RUN      ] LinkListTest.addFirst
 [       OK ] LinkListTest.addFirst (0 ms)
 [ RUN      ] LinkListTest.addLast
 [       OK ] LinkListTest.addLast (0 ms)
-[----------] 3 tests from LinkListTest (0 ms total)
+[ RUN      ] LinkListTest.contains
+[       OK ] LinkListTest.contains (0 ms)
+[ RUN      ] LinkListTest.deleteFirstLast
+[       OK ] LinkListTest.deleteFirstLast (0 ms)
+[ RUN      ] LinkListTest.copyConstructor
+[       OK ] LinkListTest.copyConstructor (0 ms)
+[----------] 6 tests from LinkListTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 13 tests from 2 test suites ran. (0 ms total)
-[  PASSED  ] 13 tests.
+[==========] 19 tests from 2 test suites ran. (1 ms total)
+[  PASSED  ] 19 tests.
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"MyStructureDonneeTest" end time: Jul 06 20:48 EDT
+"MyStructureDonneeTest" end time: Jul 07 19:44 EDT
 "MyStructureDonneeTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jul 06 20:48 EDT
+End testing: Jul 07 19:44 EDT

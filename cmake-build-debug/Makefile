@@ -321,30 +321,6 @@ src/structure_donnee/array/My_Array.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/structure_donnee/array/My_Array.cpp.s
 .PHONY : src/structure_donnee/array/My_Array.cpp.s
 
-src/structure_donnee/link_list/Link_List.o: src/structure_donnee/link_list/Link_List.cpp.o
-.PHONY : src/structure_donnee/link_list/Link_List.o
-
-# target to build an object file
-src/structure_donnee/link_list/Link_List.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/structure_donnee/link_list/Link_List.cpp.o
-.PHONY : src/structure_donnee/link_list/Link_List.cpp.o
-
-src/structure_donnee/link_list/Link_List.i: src/structure_donnee/link_list/Link_List.cpp.i
-.PHONY : src/structure_donnee/link_list/Link_List.i
-
-# target to preprocess a source file
-src/structure_donnee/link_list/Link_List.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/structure_donnee/link_list/Link_List.cpp.i
-.PHONY : src/structure_donnee/link_list/Link_List.cpp.i
-
-src/structure_donnee/link_list/Link_List.s: src/structure_donnee/link_list/Link_List.cpp.s
-.PHONY : src/structure_donnee/link_list/Link_List.s
-
-# target to generate assembly for a file
-src/structure_donnee/link_list/Link_List.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/structure_donnee/link_list/Link_List.cpp.s
-.PHONY : src/structure_donnee/link_list/Link_List.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -373,9 +349,6 @@ help:
 	@echo "... src/structure_donnee/array/My_Array.o"
 	@echo "... src/structure_donnee/array/My_Array.i"
 	@echo "... src/structure_donnee/array/My_Array.s"
-	@echo "... src/structure_donnee/link_list/Link_List.o"
-	@echo "... src/structure_donnee/link_list/Link_List.i"
-	@echo "... src/structure_donnee/link_list/Link_List.s"
 .PHONY : help
 
 

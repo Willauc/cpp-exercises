@@ -51,8 +51,7 @@
 			[
 				0,
 				1,
-				2,
-				3
+				2
 			]
 		}
 	],
@@ -87,15 +86,14 @@
 			[
 				0,
 				1,
-				2,
-				3
+				2
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				4
+				3
 			]
 		}
 	],
@@ -117,12 +115,6 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/structure_donnee/array/My_Array.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "src/structure_donnee/link_list/Link_List.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

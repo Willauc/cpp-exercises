@@ -2,8 +2,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/tests.dir/link.d"
   "CMakeFiles/tests.dir/__/src/structure_donnee/array/My_Array.cpp.o"
   "CMakeFiles/tests.dir/__/src/structure_donnee/array/My_Array.cpp.o.d"
-  "CMakeFiles/tests.dir/__/src/structure_donnee/link_list/Link_List.cpp.o"
-  "CMakeFiles/tests.dir/__/src/structure_donnee/link_list/Link_List.cpp.o.d"
   "CMakeFiles/tests.dir/test_link_list.cpp.o"
   "CMakeFiles/tests.dir/test_link_list.cpp.o.d"
   "CMakeFiles/tests.dir/test_my_array.cpp.o"

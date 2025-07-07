@@ -6,8 +6,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/src/affichage_matrice.cpp.o.d"
   "CMakeFiles/main.dir/src/structure_donnee/array/My_Array.cpp.o"
   "CMakeFiles/main.dir/src/structure_donnee/array/My_Array.cpp.o.d"
-  "CMakeFiles/main.dir/src/structure_donnee/link_list/Link_List.cpp.o"
-  "CMakeFiles/main.dir/src/structure_donnee/link_list/Link_List.cpp.o.d"
   "main"
   "main.pdb"
 )

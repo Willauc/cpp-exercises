@@ -34,6 +34,7 @@ My_Array::~My_Array() {
     delete[] m_array;
 }
 
+// O(n)
 void My_Array::insert(int value) {
     if (m_capacity == m_count) {
         m_capacity *= 2;
@@ -48,6 +49,7 @@ void My_Array::insert(int value) {
     m_array[m_count++] = value;
 }
 
+// O(n)
 void My_Array::removeAt(int index) {
     if (index < 0 || index >= m_count) {
         throw std::out_of_range("Index hors tableau.");
@@ -69,6 +71,7 @@ void My_Array::removeAt(int index) {
     }
 }
 
+// O(1)
 int My_Array::get(int index) const {
     if (index < 0 || index >= m_count) {
         throw std::out_of_range("Index hors tableau.");
@@ -85,6 +88,7 @@ int My_Array::get_count() const {
     return m_count;
 }
 
+// O(n)
 int My_Array::indexOf(int value) const {
     for (int i = 0; i < m_count; i++) {
         if (m_array[i] == value) {
@@ -94,12 +98,14 @@ int My_Array::indexOf(int value) const {
     return -1;
 }
 
+// O(n)
 void My_Array::print() const {
     for (int i = 0; i < m_count; i++) {
         std::cout << m_array[i] << std::endl;
     }
 }
 
+// O(n)
 int My_Array::max() const {
     int max = m_array[0];
     for (int i = 1; i < m_count; i++) {
@@ -110,6 +116,7 @@ int My_Array::max() const {
     return max;
 }
 
+// O(n^2)
 My_Array My_Array::intersect(const My_Array &second) const {
     My_Array commun(0);
     for (int i = 0; i < m_count; i++) {
@@ -120,6 +127,7 @@ My_Array My_Array::intersect(const My_Array &second) const {
     return commun;
 }
 
+// O(n)
 void My_Array::reverse() {
     auto *temp = new int[m_capacity];
     int index = 0;
@@ -131,16 +139,18 @@ void My_Array::reverse() {
     m_array = temp;
 }
 
+// O(n)
 void My_Array::insertAt(int value, int index) {
-    if (index < 0 || index >= m_count) {
+    if (index < 0 || index > m_count) {
         throw std::out_of_range("Index hors tableau.");
     }
-    if (m_capacity == m_count + 1) {
+    if (m_count == m_capacity) {
         m_capacity *= 2;
     }
     auto *temp = new int[m_capacity];
     bool value_inserted = false;
     int index2 = 0;
+
     for (int i = 0; i < m_count; i++) {
         if (i == index && not value_inserted) {
             temp[index2] = value;
@@ -150,6 +160,10 @@ void My_Array::insertAt(int value, int index) {
 
         temp[index2] = m_array[i];
         index2++;
+    }
+
+    if (!value_inserted) {
+        temp[index2++] = value;
     }
     m_count++;
     delete[] m_array;

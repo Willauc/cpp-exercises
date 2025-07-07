@@ -35,8 +35,7 @@ public:
         last = nullptr;
         auto iter = other.first;
         while (iter != nullptr) {
-            auto node = new link_list<T>(*iter);
-            addLast(node);
+            addLast(iter->value);
             iter = iter->next;
         }
     }
@@ -48,6 +47,7 @@ public:
     }
 
 
+    // O(1)
     void addFirst(T value) {
         auto to_Add = new node<T>{value, nullptr};
 
@@ -59,6 +59,7 @@ public:
         }
     }
 
+    // O(1)
     void addLast(T value) {
         auto to_Add = new node<T>{value, nullptr};
 
@@ -70,6 +71,7 @@ public:
         }
     }
 
+    // O(1)
     void deleteFirst() {
         if (first != nullptr) {
             auto to_Delete = first;
@@ -83,6 +85,7 @@ public:
         }
     }
 
+    // O(n)
     void deleteLast() {
         if (last != nullptr && first != last) {
             auto to_Delete = last;
@@ -99,6 +102,7 @@ public:
     }
 
 
+    // O(n)
     bool contains(const T &value) const {
         auto iter = first;
         while (iter != nullptr) {
@@ -110,6 +114,7 @@ public:
         return false;
     }
 
+    // O(n)
     int indexOf(const T &value) {
         auto iter = first;
         int index = 0;
