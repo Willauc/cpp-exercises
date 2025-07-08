@@ -13,18 +13,22 @@
 #ifndef LINK_LIST_H
 #define LINK_LIST_H
 
-template<typename T>
-struct node {
-    T value;
-    node<T> *next;
-};
-
 
 template<typename T>
 class link_list {
 private:
-    node<T> *first;
-    node<T> *last;
+    struct node {
+        T value;
+        node *next;
+
+
+        explicit node(T p_value) : value(p_value), next(nullptr) {
+        };
+    };
+
+
+    node *first;
+    node *last;
 
 public:
     link_list(): first(nullptr), last(nullptr) {
@@ -49,9 +53,9 @@ public:
 
     // O(1)
     void addFirst(T value) {
-        auto to_Add = new node<T>{value, nullptr};
+        auto to_Add = new node(value);
 
-        if (first == nullptr) {
+        if (isEmpty()) {
             first = last = to_Add;
         } else {
             to_Add->next = first;
@@ -61,9 +65,9 @@ public:
 
     // O(1)
     void addLast(T value) {
-        auto to_Add = new node<T>{value, nullptr};
+        auto to_Add = new node(value);
 
-        if (last == nullptr) {
+        if (isEmpty()) {
             first = last = to_Add;
         } else {
             last->next = to_Add;
@@ -73,20 +77,24 @@ public:
 
     // O(1)
     void deleteFirst() {
-        if (first != nullptr) {
-            auto to_Delete = first;
-            first = to_Delete->next;
-
-            if (first == nullptr) {
-                last = nullptr;
-            }
-
-            delete to_Delete;
+        if (isEmpty()) {
+            throw std::runtime_error("Liste vide — suppression impossible");
         }
+        auto to_Delete = first;
+        first = to_Delete->next;
+
+        if (first == nullptr) {
+            last = nullptr;
+        }
+
+        delete to_Delete;
     }
 
     // O(n)
     void deleteLast() {
+        if (isEmpty()) {
+            throw std::runtime_error("Liste vide — suppression impossible");
+        }
         if (last != nullptr && first != last) {
             auto to_Delete = last;
             auto new_last = first;
@@ -104,18 +112,11 @@ public:
 
     // O(n)
     bool contains(const T &value) const {
-        auto iter = first;
-        while (iter != nullptr) {
-            if (iter->value == value) {
-                return true;
-            }
-            iter = iter->next;
-        }
-        return false;
+        return indexOf(value) != -1;
     }
 
     // O(n)
-    int indexOf(const T &value) {
+    int indexOf(const T &value) const {
         auto iter = first;
         int index = 0;
         while (iter != nullptr) {
@@ -126,6 +127,10 @@ public:
             index++;
         }
         return -1;
+    }
+
+    bool isEmpty() {
+        return first == nullptr;
     }
 };
 
