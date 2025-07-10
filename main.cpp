@@ -22,9 +22,13 @@ int main() {
 
     affichage_matrice_v3(vector);
 */
-link_list<int> lst;
-    lst.addFirst(1);
-    lst.addLast(2);
-    lst.indexOf(2);
+    link_list<int> lst;
+
+    lst.addLast(10);
+    lst.addLast(20);
+    lst.addLast(30);
+    lst.addLast(40);
+
+    lst.reverse();
     return 0;
 }

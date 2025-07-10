@@ -1,3 +1,2 @@
-MyArrayTest 10 0.00032111
-MyStructureDonneeTest 15 0.000602364
+MyStructureDonneeTest 3 0.0028795
 ---

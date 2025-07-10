@@ -29,9 +29,10 @@ private:
 
     node *first;
     node *last;
+    int count;
 
 public:
-    link_list(): first(nullptr), last(nullptr) {
+    link_list(): first(nullptr), last(nullptr), count(0) {
     }
 
     link_list(const link_list &other) {
@@ -57,9 +58,11 @@ public:
 
         if (isEmpty()) {
             first = last = to_Add;
+            count++;
         } else {
             to_Add->next = first;
             first = to_Add;
+            count++;
         }
     }
 
@@ -69,9 +72,11 @@ public:
 
         if (isEmpty()) {
             first = last = to_Add;
+            count++;
         } else {
             last->next = to_Add;
             last = to_Add;
+            count++;
         }
     }
 
@@ -88,6 +93,7 @@ public:
         }
 
         delete to_Delete;
+        count--;
     }
 
     // O(n)
@@ -104,8 +110,10 @@ public:
             last = new_last;
             new_last->next = nullptr;
             delete to_Delete;
+            count--;
         } else if (last != nullptr && first == last) {
             deleteFirst();
+            count--;
         }
     }
 
@@ -131,6 +139,25 @@ public:
 
     bool isEmpty() {
         return first == nullptr;
+    }
+
+    // O(n)
+    void reverse() {
+        if (isEmpty() || first == last) return;
+
+        node *precedent = nullptr;
+        node *current = first;
+        node *suivant = nullptr;
+
+        last = first;
+
+        while (current != nullptr) {
+            suivant = current->next;
+            current->next = precedent;
+            precedent = current;
+            current = suivant;
+        }
+        first = precedent;
     }
 };
 

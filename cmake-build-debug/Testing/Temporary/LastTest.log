@@ -1,15 +1,32 @@
-Start testing: Jul 08 15:19 EDT
+Start testing: Jul 10 09:39 Est (heure d’été)
 ----------------------------------------------------------
 1/1 Testing: MyStructureDonneeTest
 1/1 Test: MyStructureDonneeTest
-Command: "/home/william/Documents/GitHub/cpp-exercises/cmake-build-debug/tests/tests"
-Directory: /home/william/Documents/GitHub/cpp-exercises/cmake-build-debug/tests
-"MyStructureDonneeTest" start time: Jul 08 15:19 EDT
+Command: "C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/cmake-build-debug/tests/tests.exe"
+Directory: C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/cmake-build-debug/tests
+"MyStructureDonneeTest" start time: Jul 10 09:39 Est (heure d’été)
 Output:
 ----------------------------------------------------------
-Running main() from /home/william/Documents/GitHub/cpp-exercises/extern/googletest/googletest/src/gtest_main.cc
-[==========] Running 19 tests from 2 test suites.
+Running main() from C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/src/gtest_main.cc
+[==========] Running 20 tests from 2 test suites.
 [----------] Global test environment set-up.
+[----------] 7 tests from LinkListTest
+[ RUN      ] LinkListTest.constructeur
+[       OK ] LinkListTest.constructeur (0 ms)
+[ RUN      ] LinkListTest.addFirst
+[       OK ] LinkListTest.addFirst (0 ms)
+[ RUN      ] LinkListTest.addLast
+[       OK ] LinkListTest.addLast (0 ms)
+[ RUN      ] LinkListTest.contains
+[       OK ] LinkListTest.contains (0 ms)
+[ RUN      ] LinkListTest.deleteFirstLast
+[       OK ] LinkListTest.deleteFirstLast (0 ms)
+[ RUN      ] LinkListTest.constructeurDeCopie
+[       OK ] LinkListTest.constructeurDeCopie (0 ms)
+[ RUN      ] LinkListTest.reverse
+[       OK ] LinkListTest.reverse (0 ms)
+[----------] 7 tests from LinkListTest (0 ms total)
+
 [----------] 13 tests from MyArrayTest
 [ RUN      ] MyArrayTest.InsertAndGet
 [       OK ] MyArrayTest.InsertAndGet (0 ms)
@@ -39,30 +56,15 @@ Running main() from /home/william/Documents/GitHub/cpp-exercises/extern/googlete
 [       OK ] MyArrayTest.InsertionExeption (0 ms)
 [----------] 13 tests from MyArrayTest (0 ms total)
 
-[----------] 6 tests from LinkListTest
-[ RUN      ] LinkListTest.constructeur
-[       OK ] LinkListTest.constructeur (0 ms)
-[ RUN      ] LinkListTest.addFirst
-[       OK ] LinkListTest.addFirst (0 ms)
-[ RUN      ] LinkListTest.addLast
-[       OK ] LinkListTest.addLast (0 ms)
-[ RUN      ] LinkListTest.contains
-[       OK ] LinkListTest.contains (0 ms)
-[ RUN      ] LinkListTest.deleteFirstLast
-[       OK ] LinkListTest.deleteFirstLast (0 ms)
-[ RUN      ] LinkListTest.constructeurDeCopie
-[       OK ] LinkListTest.constructeurDeCopie (0 ms)
-[----------] 6 tests from LinkListTest (0 ms total)
-
 [----------] Global test environment tear-down
-[==========] 19 tests from 2 test suites ran. (0 ms total)
-[  PASSED  ] 19 tests.
+[==========] 20 tests from 2 test suites ran. (0 ms total)
+[  PASSED  ] 20 tests.
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"MyStructureDonneeTest" end time: Jul 08 15:19 EDT
+"MyStructureDonneeTest" end time: Jul 10 09:39 Est (heure d’été)
 "MyStructureDonneeTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jul 08 15:19 EDT
+End testing: Jul 10 09:39 Est (heure d’été)

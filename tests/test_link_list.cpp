@@ -45,6 +45,8 @@ TEST(LinkListTest, contains) {
 
 TEST(LinkListTest, deleteFirstLast) {
     link_list<int> lst{};
+    EXPECT_ANY_THROW(lst.deleteLast());
+    EXPECT_ANY_THROW(lst.deleteFirst());
     lst.addFirst(1);
     lst.addFirst(2);
     lst.addLast(3);
@@ -80,4 +82,20 @@ TEST(LinkListTest, constructeurDeCopie) {
     original.deleteFirst();
     EXPECT_TRUE(copy.contains(10));
     EXPECT_FALSE(original.contains(10));
+}
+
+TEST(LinkListTest, reverse) {
+    link_list<int> lst;
+
+    lst.addLast(10);
+    lst.addLast(20);
+    lst.addLast(30);
+    lst.addLast(40);
+
+    lst.reverse();
+
+    EXPECT_EQ(lst.indexOf(10), 3);
+    EXPECT_EQ(lst.indexOf(20), 2);
+    EXPECT_EQ(lst.indexOf(30), 1);
+    EXPECT_EQ(lst.indexOf(40), 0);
 }
