@@ -99,3 +99,19 @@ TEST(LinkListTest, reverse) {
     EXPECT_EQ(lst.indexOf(30), 1);
     EXPECT_EQ(lst.indexOf(40), 0);
 }
+
+TEST(LinkListTest, getKthFromTheEnd) {
+    link_list<int> lst;
+
+    lst.addLast(10);
+    lst.addLast(20);
+    lst.addLast(30);
+    lst.addLast(40);
+
+    EXPECT_EQ(lst.getKthFromTheEnd(0), 40);
+    EXPECT_EQ(lst.getKthFromTheEnd(1), 30);
+    EXPECT_EQ(lst.getKthFromTheEnd(2), 20);
+    EXPECT_EQ(lst.getKthFromTheEnd(3), 10);
+
+    EXPECT_ANY_THROW(lst.getKthFromTheEnd(4));
+}

@@ -35,9 +35,7 @@ public:
     link_list(): first(nullptr), last(nullptr), count(0) {
     }
 
-    link_list(const link_list &other) {
-        first = nullptr;
-        last = nullptr;
+    link_list(const link_list &other): first(nullptr), last(nullptr), count(0) {
         auto iter = other.first;
         while (iter != nullptr) {
             addLast(iter->value);
@@ -158,6 +156,27 @@ public:
             current = suivant;
         }
         first = precedent;
+    }
+
+    T getKthFromTheEnd(int k) {
+        if (k >= count || k < 0) {
+            throw std::out_of_range(" Valeur demander hors list.");
+        }
+        if (k == 0) {
+            return last->value;
+        }
+        auto iter = first;
+        auto iter2 = first;
+        int difference = 0;
+        while (difference != k) {
+            iter2 = iter2->next;
+            difference++;
+        }
+        while (iter2 != last) {
+            iter = iter->next;
+            iter2 = iter2->next;
+        }
+        return iter->value;
     }
 };
 
