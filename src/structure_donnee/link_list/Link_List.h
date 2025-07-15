@@ -159,6 +159,9 @@ public:
     }
 
     T getKthFromTheEnd(int k) {
+        if (isEmpty()) {
+            throw std::out_of_range("List vide.") ;
+        }
         if (k >= count || k < 0) {
             throw std::out_of_range(" Valeur demander hors list.");
         }
@@ -167,10 +170,8 @@ public:
         }
         auto iter = first;
         auto iter2 = first;
-        int difference = 0;
-        while (difference != k) {
+        for (int i =0; i < k; i++) {
             iter2 = iter2->next;
-            difference++;
         }
         while (iter2 != last) {
             iter = iter->next;

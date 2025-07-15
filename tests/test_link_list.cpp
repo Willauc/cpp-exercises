@@ -102,6 +102,7 @@ TEST(LinkListTest, reverse) {
 
 TEST(LinkListTest, getKthFromTheEnd) {
     link_list<int> lst;
+    EXPECT_ANY_THROW(lst.getKthFromTheEnd(0));
 
     lst.addLast(10);
     lst.addLast(20);

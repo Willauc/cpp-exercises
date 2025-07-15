@@ -21,6 +21,7 @@ CMakeFiles/main.dir/main.cpp.o: /home/william/Documents/GitHub/cpp-exercises/mai
   /usr/include/c++/13/bits/cpp_type_traits.h \
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
+  /usr/include/c++/13/bits/deque.tcc \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/exception_ptr.h \
@@ -52,11 +53,13 @@ CMakeFiles/main.dir/main.cpp.o: /home/william/Documents/GitHub/cpp-exercises/mai
   /usr/include/c++/13/bits/stl_algobase.h \
   /usr/include/c++/13/bits/stl_bvector.h \
   /usr/include/c++/13/bits/stl_construct.h \
+  /usr/include/c++/13/bits/stl_deque.h \
   /usr/include/c++/13/bits/stl_function.h \
   /usr/include/c++/13/bits/stl_iterator.h \
   /usr/include/c++/13/bits/stl_iterator_base_funcs.h \
   /usr/include/c++/13/bits/stl_iterator_base_types.h \
   /usr/include/c++/13/bits/stl_pair.h \
+  /usr/include/c++/13/bits/stl_stack.h \
   /usr/include/c++/13/bits/stl_uninitialized.h \
   /usr/include/c++/13/bits/stl_vector.h \
   /usr/include/c++/13/bits/streambuf.tcc \
@@ -77,6 +80,7 @@ CMakeFiles/main.dir/main.cpp.o: /home/william/Documents/GitHub/cpp-exercises/mai
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
   /usr/include/c++/13/debug/debug.h \
+  /usr/include/c++/13/deque \
   /usr/include/c++/13/exception \
   /usr/include/c++/13/ext/alloc_traits.h \
   /usr/include/c++/13/ext/atomicity.h \
@@ -91,6 +95,7 @@ CMakeFiles/main.dir/main.cpp.o: /home/william/Documents/GitHub/cpp-exercises/mai
   /usr/include/c++/13/new \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/stack \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/streambuf \
   /usr/include/c++/13/string \
@@ -671,7 +676,15 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
 
-/usr/include/c++/13/exception:
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
 /usr/include/c++/13/cwctype:
 
@@ -682,6 +695,8 @@ CMakeFiles/main.dir/main.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/c++/13/cstddef:
+
+/usr/include/c++/13/bits/stl_stack.h:
 
 /usr/include/c++/13/cctype:
 
@@ -712,8 +727,6 @@ CMakeFiles/main.dir/main.cpp.o:
 /lib64/ld-linux-x86-64.so.2:
 
 /usr/include/c++/13/bits/streambuf_iterator.h:
-
-/usr/include/c++/13/debug/debug.h:
 
 /usr/include/c++/13/bits/streambuf.tcc:
 
@@ -748,6 +761,20 @@ CMakeFiles/main.dir/main.cpp.o:
 /usr/include/stdc-predef.h:
 
 /usr/include/c++/13/bits/new_allocator.h:
+
+/usr/include/c++/13/bits/stl_algobase.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h:
+
+/usr/include/c++/13/new:
+
+/usr/include/c++/13/ios:
+
+/usr/include/x86_64-linux-gnu/bits/endian.h:
+
+/usr/include/c++/13/bits/memoryfwd.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/c++/13/bits/functional_hash.h:
 
@@ -795,7 +822,7 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/c++/13/bits/localefwd.h:
 
-/usr/include/c++/13/ext/alloc_traits.h:
+/usr/include/c++/13/debug/debug.h:
 
 /usr/include/c++/13/system_error:
 
@@ -853,19 +880,9 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/c++/13/bits/cxxabi_forced.h:
 
-/usr/include/c++/13/bits/stl_algobase.h:
+/usr/include/c++/13/bits/deque.tcc:
 
-/usr/include/x86_64-linux-gnu/c++/13/bits/cpu_defines.h:
-
-/usr/include/c++/13/new:
-
-/usr/include/c++/13/ios:
-
-/usr/include/x86_64-linux-gnu/bits/endian.h:
-
-/usr/include/c++/13/bits/memoryfwd.h:
-
-/usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
+/usr/include/c++/13/string_view:
 
 /usr/include/c++/13/bits/postypes.h:
 
@@ -890,6 +907,14 @@ CMakeFiles/main.dir/main.cpp.o:
 /usr/include/c++/13/tuple:
 
 /usr/include/c++/13/bits/uses_allocator.h:
+
+/usr/include/c++/13/deque:
+
+/usr/include/c++/13/exception:
+
+/usr/include/c++/13/bits/stl_deque.h:
+
+/usr/include/c++/13/ext/alloc_traits.h:
 
 /usr/include/errno.h:
 
@@ -919,7 +944,19 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
-/usr/include/c++/13/string_view:
+/usr/include/c++/13/stack:
+
+/usr/include/wchar.h:
+
+/usr/include/c++/13/map:
+
+/usr/include/c++/13/bits/basic_ios.h:
+
+/usr/include/x86_64-linux-gnu/bits/types.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
 /usr/include/c++/13/bits/nested_exception.h:
 
@@ -959,18 +996,6 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/stdlib.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/time_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-
-/usr/include/wchar.h:
-
-/usr/include/c++/13/map:
-
-/usr/include/c++/13/bits/basic_ios.h:
-
-/usr/include/x86_64-linux-gnu/bits/types.h:
-
 /usr/include/x86_64-linux-gnu/asm/errno.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
@@ -989,17 +1014,11 @@ CMakeFiles/main.dir/main.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
 CMakeFiles/main.dir/src/structure_donnee/array/My_Array.cpp.o:
 
@@ -1042,7 +1061,3 @@ CMakeFiles/main.dir/src/affichage_matrice.cpp.o:
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
-
-/usr/include/x86_64-linux-gnu/bits/waitstatus.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:

@@ -11,6 +11,7 @@
 #include <vector>
 #include "src/structure_donnee/link_list/Link_List.h"
 #include "src/affichage_matrice.h"
+#include <stack>
 
 int main() {
     /*
@@ -22,13 +23,22 @@ int main() {
 
     affichage_matrice_v3(vector);
 */
-    link_list<int> lst;
 
-    lst.addLast(10);
-    lst.addLast(20);
-    lst.addLast(30);
-    lst.addLast(40);
+    std::string line = "abcde";
+    std::stack<char> stack;
+    std::string newLine;
 
-    lst.reverse();
+    for (auto car : line) {
+        stack.push(car);
+    }
+    while (!stack.empty()) {
+        newLine += stack.top();
+        stack.pop();
+
+    }
+
+    std::cout << newLine << std::endl;
+
+
     return 0;
 }
