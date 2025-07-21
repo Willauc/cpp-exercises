@@ -11,8 +11,7 @@
 #include <vector>
 #include "src/structure_donnee/link_list/Link_List.h"
 #include "src/affichage_matrice.h"
-#include <stack>
-
+#include "src/structure_donnee/stack/Expression.h"
 int main() {
     /*
     std::vector<std::vector<std::string>> vector = {
@@ -24,21 +23,11 @@ int main() {
     affichage_matrice_v3(vector);
 */
 
-    std::string line = "abcde";
-    std::stack<char> stack;
-    std::string newLine;
+    std::string input = "(2+3) [])";
+    Expression expression;
 
-    for (auto car : line) {
-        stack.push(car);
-    }
-    while (!stack.empty()) {
-        newLine += stack.top();
-        stack.pop();
 
-    }
-
-    std::cout << newLine << std::endl;
-
+    std::cout << expression.balanceStr(input) << std::endl;
 
     return 0;
 }

@@ -9,6 +9,9 @@ add_executable(main
         src/affichage_matrice.cpp
         src/structure_donnee/array/My_Array.cpp
         src/affichage_matrice.h
+        src/structure_donnee/stack/Stack.h
+        src/structure_donnee/stack/Expression.cpp
+        src/structure_donnee/stack/Expression.h
 
 )
 

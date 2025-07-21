@@ -321,6 +321,30 @@ src/structure_donnee/array/My_Array.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/structure_donnee/array/My_Array.cpp.s
 .PHONY : src/structure_donnee/array/My_Array.cpp.s
 
+src/structure_donnee/stack/Expression.o: src/structure_donnee/stack/Expression.cpp.o
+.PHONY : src/structure_donnee/stack/Expression.o
+
+# target to build an object file
+src/structure_donnee/stack/Expression.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/structure_donnee/stack/Expression.cpp.o
+.PHONY : src/structure_donnee/stack/Expression.cpp.o
+
+src/structure_donnee/stack/Expression.i: src/structure_donnee/stack/Expression.cpp.i
+.PHONY : src/structure_donnee/stack/Expression.i
+
+# target to preprocess a source file
+src/structure_donnee/stack/Expression.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/structure_donnee/stack/Expression.cpp.i
+.PHONY : src/structure_donnee/stack/Expression.cpp.i
+
+src/structure_donnee/stack/Expression.s: src/structure_donnee/stack/Expression.cpp.s
+.PHONY : src/structure_donnee/stack/Expression.s
+
+# target to generate assembly for a file
+src/structure_donnee/stack/Expression.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/structure_donnee/stack/Expression.cpp.s
+.PHONY : src/structure_donnee/stack/Expression.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -349,6 +373,9 @@ help:
 	@echo "... src/structure_donnee/array/My_Array.o"
 	@echo "... src/structure_donnee/array/My_Array.i"
 	@echo "... src/structure_donnee/array/My_Array.s"
+	@echo "... src/structure_donnee/stack/Expression.o"
+	@echo "... src/structure_donnee/stack/Expression.i"
+	@echo "... src/structure_donnee/stack/Expression.s"
 .PHONY : help
 
 
