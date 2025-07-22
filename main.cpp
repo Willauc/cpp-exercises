@@ -23,7 +23,7 @@ int main() {
     affichage_matrice_v3(vector);
 */
 
-    std::string input = "(2+3) [])";
+    std::string input = "((2+3) [])";
     Expression expression;
 
 
