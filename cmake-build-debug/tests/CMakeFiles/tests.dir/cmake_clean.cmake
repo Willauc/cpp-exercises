@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/tests.dir/test_link_list.cpp.o.d"
   "CMakeFiles/tests.dir/test_my_array.cpp.o"
   "CMakeFiles/tests.dir/test_my_array.cpp.o.d"
+  "CMakeFiles/tests.dir/test_stack.cpp.o"
+  "CMakeFiles/tests.dir/test_stack.cpp.o.d"
   "tests"
   "tests.pdb"
 )
