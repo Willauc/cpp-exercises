@@ -12,6 +12,8 @@
 #include "src/structure_donnee/link_list/Link_List.h"
 #include "src/affichage_matrice.h"
 #include "src/structure_donnee/stack/Expression.h"
+#include <queue>
+#include "src/structure_donnee/queue/QueueExercise.cpp"
 int main() {
     /*
     std::vector<std::vector<std::string>> vector = {
@@ -22,12 +24,30 @@ int main() {
 
     affichage_matrice_v3(vector);
 */
+std::queue<int> queue;
+    queue.push(10);
+    queue.push(20);
+    queue.push(30);
+    queue.push(40);
 
-    std::string input = "((2+3) [])";
-    Expression expression;
+    while (!queue.empty()) {
+        std::cout << queue.front() << " ";
+        queue.pop();
+    }
+    std::cout<<std::endl;
+    queue.push(10);
+    queue.push(20);
+    queue.push(30);
+    queue.push(40);
+
+    reverse(queue);
+
+    while (!queue.empty()) {
+        std::cout << queue.front() << " ";
+        queue.pop();
+    }
 
 
-    std::cout << expression.balanceStr(input) << std::endl;
 
     return 0;
 }

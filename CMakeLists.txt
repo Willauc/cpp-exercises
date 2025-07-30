@@ -12,6 +12,7 @@ add_executable(main
         src/structure_donnee/stack/Stack.h
         src/structure_donnee/stack/Expression.cpp
         src/structure_donnee/stack/Expression.h
+        src/structure_donnee/queue/QueueExercise.cpp
 
 )
 
