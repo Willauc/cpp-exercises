@@ -5,6 +5,7 @@ add_executable(tests
         ../src/structure_donnee/link_list/Link_List.h
         test_link_list.cpp
         test_stack.cpp
+        ArrayQueueTest.cpp
 )
 
 target_link_libraries(tests

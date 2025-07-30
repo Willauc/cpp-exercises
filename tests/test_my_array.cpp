@@ -1,6 +1,6 @@
 /*
 ========================================================================
-  Fichier     : My_Array.cpp
+  Fichier     : test_my_array.cpp
   Auteur      : William Turbide Auclair
   Date        : 1 juillet 2025
   Description : Test pour la calsse My_Array.
