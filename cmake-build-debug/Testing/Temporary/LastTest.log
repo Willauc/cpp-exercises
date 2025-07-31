@@ -1,15 +1,20 @@
-Start testing: Jul 31 10:30 Est (heure d’été)
+Start testing: Jul 31 10:44 Est (heure d’été)
 ----------------------------------------------------------
 1/1 Testing: MyStructureDonneeTest
 1/1 Test: MyStructureDonneeTest
 Command: "C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/cmake-build-debug/tests/tests.exe"
 Directory: C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/cmake-build-debug/tests
-"MyStructureDonneeTest" start time: Jul 31 10:30 Est (heure d’été)
+"MyStructureDonneeTest" start time: Jul 31 10:44 Est (heure d’été)
 Output:
 ----------------------------------------------------------
 Running main() from C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/src/gtest_main.cc
-[==========] Running 25 tests from 4 test suites.
+[==========] Running 26 tests from 5 test suites.
 [----------] Global test environment set-up.
+[----------] 1 test from StackQueueTest
+[ RUN      ] StackQueueTest.constructeur
+[       OK ] StackQueueTest.constructeur (0 ms)
+[----------] 1 test from StackQueueTest (0 ms total)
+
 [----------] 2 tests from ArrayQueuetest
 [ RUN      ] ArrayQueuetest.constructeur
 [       OK ] ArrayQueuetest.constructeur (0 ms)
@@ -73,14 +78,14 @@ Running main() from C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercise
 [----------] 13 tests from MyArrayTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 25 tests from 4 test suites ran. (0 ms total)
-[  PASSED  ] 25 tests.
+[==========] 26 tests from 5 test suites ran. (0 ms total)
+[  PASSED  ] 26 tests.
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"MyStructureDonneeTest" end time: Jul 31 10:30 Est (heure d’été)
+"MyStructureDonneeTest" end time: Jul 31 10:44 Est (heure d’été)
 "MyStructureDonneeTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Jul 31 10:30 Est (heure d’été)
+End testing: Jul 31 10:44 Est (heure d’été)

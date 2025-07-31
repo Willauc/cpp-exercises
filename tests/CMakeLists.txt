@@ -6,6 +6,7 @@ add_executable(tests
         test_link_list.cpp
         test_stack.cpp
         ArrayQueueTest.cpp
+        StackQueueTest.cpp
 )
 
 target_link_libraries(tests
