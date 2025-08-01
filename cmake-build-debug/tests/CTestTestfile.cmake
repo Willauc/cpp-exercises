@@ -5,4 +5,4 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 add_test(MyStructureDonneeTest "C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/cmake-build-debug/tests/tests.exe")
-set_tests_properties(MyStructureDonneeTest PROPERTIES  _BACKTRACE_TRIPLES "C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/tests/CMakeLists.txt;21;add_test;C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/tests/CMakeLists.txt;0;")
+set_tests_properties(MyStructureDonneeTest PROPERTIES  _BACKTRACE_TRIPLES "C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/tests/CMakeLists.txt;22;add_test;C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/tests/CMakeLists.txt;0;")

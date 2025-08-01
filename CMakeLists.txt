@@ -15,6 +15,7 @@ add_executable(main
         src/structure_donnee/queue/QueueExercise.cpp
         src/structure_donnee/queue/ArrayQueue.h
         src/structure_donnee/queue/StackQueue.h
+        src/structure_donnee/queue/PriorityQueue.h
 
 )
 

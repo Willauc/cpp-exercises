@@ -1,6 +1,6 @@
 # ninja log v5
 9	425	7755874436896220	CMakeFiles/main.dir/main.cpp.obj	7981de0d3c183a9
-45	1219	7755829405723276	tests/CMakeFiles/tests.dir/test_stack.cpp.obj	2633a51c7450e8c1
+9	984	7757594712898744	tests/CMakeFiles/tests.dir/test_stack.cpp.obj	2633a51c7450e8c1
 11	439	7755829397893281	CMakeFiles/main.dir/src/structure_donnee/array/My_Array.cpp.obj	20a37613d836feb4
 6671	8844	7755829481973291	lib/libgtest.a	9476bdb99bf7bdcb
 14	482	7755829398353277	CMakeFiles/main.dir/src/structure_donnee/stack/Expression.cpp.obj	171964e3b0d68464
@@ -16,17 +16,8 @@
 9117	9171	7755829485263278	lib/libgmock_main.a	e3e11f6c180e6877
 8849	8900	7755829482553701	lib/libgtest_main.a	efc927ec34422dd6
 8844	9117	7755829484713259	lib/libgmock.a	16a5e529dda78942
-939	3428	7756754153831300	tests/tests.exe	56100d9a49d23b5a
+904	3424	7757717057187994	tests/tests.exe	daf4a6f138de7978
 12	421	7755874436866232	CMakeFiles/main.dir/src/structure_donnee/queue/QueueExercise.cpp.obj	b87b9908ea129b8d
-9	938	7756754128961352	tests/CMakeFiles/tests.dir/ArrayQueueTest.cpp.obj	43de04568aa9b86d
-13	903	7756762716991070	tests/CMakeFiles/tests.dir/StackQueueTest.cpp.obj	2cc4ac2cfcfeaa8a
 9	980	7756762717681097	tests/CMakeFiles/tests.dir/ArrayQueueTest.cpp.obj	43de04568aa9b86d
-980	3476	7756762742751061	tests/tests.exe	574c9219fe2e41e8
-10	989	7757591291808924	tests/CMakeFiles/tests.dir/test_stack.cpp.obj	2633a51c7450e8c1
-9	984	7757594712898744	tests/CMakeFiles/tests.dir/test_stack.cpp.obj	2633a51c7450e8c1
-9	947	7757595137569675	tests/CMakeFiles/tests.dir/StackQueueTest.cpp.obj	2cc4ac2cfcfeaa8a
-947	3574	7757595163819660	tests/tests.exe	574c9219fe2e41e8
-10	942	7757595943883352	tests/CMakeFiles/tests.dir/StackQueueTest.cpp.obj	2cc4ac2cfcfeaa8a
-943	3437	7757595968803341	tests/tests.exe	574c9219fe2e41e8
 9	956	7757618097322834	tests/CMakeFiles/tests.dir/StackQueueTest.cpp.obj	2cc4ac2cfcfeaa8a
-957	3458	7757618122319362	tests/tests.exe	574c9219fe2e41e8
+9	903	7757717032007999	tests/CMakeFiles/tests.dir/PriorityQueueTest.cpp.obj	15a70c7efa8918bd

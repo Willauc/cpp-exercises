@@ -604,6 +604,13 @@ build tests/CMakeFiles/tests.dir/StackQueueTest.cpp.obj: CXX_COMPILER__tests_uns
   OBJECT_DIR = tests\CMakeFiles\tests.dir
   OBJECT_FILE_DIR = tests\CMakeFiles\tests.dir
 
+build tests/CMakeFiles/tests.dir/PriorityQueueTest.cpp.obj: CXX_COMPILER__tests_unscanned_Debug C$:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/tests/PriorityQueueTest.cpp || cmake_object_order_depends_target_tests
+  DEP_FILE = tests\CMakeFiles\tests.dir\PriorityQueueTest.cpp.obj.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/src -isystem C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/include -isystem C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest
+  OBJECT_DIR = tests\CMakeFiles\tests.dir
+  OBJECT_FILE_DIR = tests\CMakeFiles\tests.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target tests
@@ -612,7 +619,7 @@ build tests/CMakeFiles/tests.dir/StackQueueTest.cpp.obj: CXX_COMPILER__tests_uns
 #############################################
 # Link the executable tests\tests.exe
 
-build tests/tests.exe: CXX_EXECUTABLE_LINKER__tests_Debug tests/CMakeFiles/tests.dir/test_my_array.cpp.obj tests/CMakeFiles/tests.dir/__/src/structure_donnee/array/My_Array.cpp.obj tests/CMakeFiles/tests.dir/test_link_list.cpp.obj tests/CMakeFiles/tests.dir/test_stack.cpp.obj tests/CMakeFiles/tests.dir/ArrayQueueTest.cpp.obj tests/CMakeFiles/tests.dir/StackQueueTest.cpp.obj | lib/libgtest.a lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
+build tests/tests.exe: CXX_EXECUTABLE_LINKER__tests_Debug tests/CMakeFiles/tests.dir/test_my_array.cpp.obj tests/CMakeFiles/tests.dir/__/src/structure_donnee/array/My_Array.cpp.obj tests/CMakeFiles/tests.dir/test_link_list.cpp.obj tests/CMakeFiles/tests.dir/test_stack.cpp.obj tests/CMakeFiles/tests.dir/ArrayQueueTest.cpp.obj tests/CMakeFiles/tests.dir/StackQueueTest.cpp.obj tests/CMakeFiles/tests.dir/PriorityQueueTest.cpp.obj | lib/libgtest.a lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
   FLAGS = -g
   LINK_LIBRARIES = lib/libgtest.a  lib/libgtest_main.a  -lpthread  lib/libgtest.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = tests\CMakeFiles\tests.dir
