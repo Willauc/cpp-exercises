@@ -46,9 +46,10 @@ public:
         if (isFull()) {
             throw std::length_error("Queue full");
         }
+        /*
         if (!stackOut.isEmpty()) {
             moveToIn();
-        }
+        }*/
         stackIn.push(value);
         m_count++;
     }
@@ -57,7 +58,7 @@ public:
         if (isEmpty()) {
             throw std::length_error("Queue Empty");
         }
-        if (!stackIn.isEmpty()) {
+        if (stackOut.isEmpty()) {
             moveToOut();
         }
         stackOut.pop();
@@ -68,7 +69,7 @@ public:
         if (isEmpty()) {
             throw std::length_error("Queue Empty");
         }
-        if (!stackIn.isEmpty()) {
+        if (stackOut.isEmpty()) {
             moveToOut();
         }
         return stackOut.peek();
