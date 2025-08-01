@@ -13,11 +13,11 @@
 #include <structure_donnee/stack/Stack.h>
 
 TEST(StackTest, constructeur) {
-EXPECT_NO_THROW(Stack<int> stack);
+EXPECT_NO_THROW(Stack<int> stack(5));
 }
 
 TEST(StackTest, getCountPeekIsEmpty) {
-    Stack<int> stack;
+    Stack<int> stack(5);
     EXPECT_ANY_THROW(stack.peek());
     EXPECT_ANY_THROW(stack.pop());
     EXPECT_EQ(0, stack.getCount());

@@ -18,12 +18,12 @@ class Stack {
 
 private:
     int count;
-    int capacity;
+    int m_capacity;
     T *data;
 
 public:
-    Stack(): count(0), capacity(5) {
-        data = new T[capacity];
+    Stack(int capacity): count(0), m_capacity(capacity) {
+        data = new T[m_capacity];
     };
 
     ~Stack() {
@@ -38,7 +38,7 @@ public:
         return count == 0;
     }
 
-    T peek() {
+    const T& peek() const {
         if (count == 0) {
             throw std::out_of_range("Stack is empty");
         }
@@ -51,9 +51,9 @@ public:
         }
         T top = data[count - 1];
         count--;
-        if (count < capacity / 3) {
-            if (capacity > 5) {
-                resize(capacity / 2);
+        if (count < m_capacity / 3) {
+            if (m_capacity > 5) {
+                resize(m_capacity / 2);
             }
         }
 
@@ -61,15 +61,15 @@ public:
     }
 
     void push(T value) {
-        if (count == capacity) {
-            resize(capacity * 2);
+        if (count == m_capacity) {
+            resize(m_capacity * 2);
         }
         data[count++] = value;
     }
 
     void resize(int newCapacity) {
-        capacity = newCapacity;
-        T *temp = new T[capacity];
+        m_capacity = newCapacity;
+        T *temp = new T[m_capacity];
         for (int i = 0; i < count; i++) {
             temp[i] = data[i];
         }
@@ -79,7 +79,7 @@ public:
     }
 
     int getCapacity() const {
-        return capacity;
+        return m_capacity;
     }
 };
 #endif //STACK_H

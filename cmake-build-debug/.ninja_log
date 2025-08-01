@@ -22,3 +22,9 @@
 13	903	7756762716991070	tests/CMakeFiles/tests.dir/StackQueueTest.cpp.obj	2cc4ac2cfcfeaa8a
 9	980	7756762717681097	tests/CMakeFiles/tests.dir/ArrayQueueTest.cpp.obj	43de04568aa9b86d
 980	3476	7756762742751061	tests/tests.exe	574c9219fe2e41e8
+10	989	7757591291808924	tests/CMakeFiles/tests.dir/test_stack.cpp.obj	2633a51c7450e8c1
+9	984	7757594712898744	tests/CMakeFiles/tests.dir/test_stack.cpp.obj	2633a51c7450e8c1
+9	947	7757595137569675	tests/CMakeFiles/tests.dir/StackQueueTest.cpp.obj	2cc4ac2cfcfeaa8a
+947	3574	7757595163819660	tests/tests.exe	574c9219fe2e41e8
+10	942	7757595943883352	tests/CMakeFiles/tests.dir/StackQueueTest.cpp.obj	2cc4ac2cfcfeaa8a
+943	3437	7757595968803341	tests/tests.exe	574c9219fe2e41e8
