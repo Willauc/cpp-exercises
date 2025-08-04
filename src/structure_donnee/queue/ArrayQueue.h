@@ -15,12 +15,12 @@
 
 template<typename T>
 class ArrayQueue {
-private:
-    int m_size;
-    T *m_array;
-    int m_start = 0;
+protected:
     int m_end = 0;
+    int m_start = 0;
+    T *m_array;
     int m_count = 0;
+    int m_size;
 
 public:
     explicit ArrayQueue(const int size): m_size(size), m_array(new T[size]) {
@@ -36,18 +36,18 @@ public:
         }
         m_array[m_end] = value;
         m_count++;
-        m_end = (m_end +1) % m_size;
+        m_end = (m_end + 1) % m_size;
     }
 
     void dequeue() {
         if (isEmpty()) {
             throw std::length_error("Queue Empty");
         }
-        m_start = (m_start +1) % m_size;
+        m_start = (m_start + 1) % m_size;
         m_count--;
     }
 
-    const T& peek() const {
+    const T &peek() const {
         if (isEmpty()) {
             throw std::length_error("Queue Empty");
         }
@@ -60,6 +60,18 @@ public:
 
     bool isFull() const {
         return m_count == m_size;
+    }
+    void print() const {
+        if (isEmpty()) {
+            std::cout << "Queue is empty" << std::endl;
+            return;
+        }
+
+        int iter = m_start;
+        for (int i = 0; i < m_count; ++i) {
+            std::cout << m_array[iter] << std::endl;
+            iter = (iter + 1) % m_size;
+        }
     }
 };
 
