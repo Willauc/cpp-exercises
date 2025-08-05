@@ -11,30 +11,22 @@
 */
 
 #include "hashTableExercise.h"
-
-
-/*
- *fonction qui trouve le premier caractére non répéter
- */
-
 #include <iostream>
 #include <string>
 #include <unordered_map>
 #include <stdexcept>
-
+/*
+ *fonction qui trouve le premier caractére non répéter
+ */
 char hashTableExercise::noRepCar(const std::string &sentence) {
-    std::unordered_map<char, int> map;
-    for (auto charactere: sentence) {
-        if (map.find(charactere) != map.end()) {
-            map[charactere] = ++map[charactere];
-        } else {
-            map[charactere] = 1;
+    std::unordered_map<char, int> freq;
+    for (char c: sentence) {
+        ++freq[c];
+    }
+    for (auto c: sentence) {
+        if (freq[c] == 1) {
+            return c;
         }
     }
-    for (auto charactere: sentence) {
-        if (map[charactere] == 1) {
-            return charactere;
-        }
-    }
-    throw std::invalid_argument("Mauvais argument");
+    throw std::invalid_argument("Aucun caractère non répété trouvé.");
 }
