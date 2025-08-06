@@ -18,6 +18,8 @@
 class hashTableExercise {
 public:
     static char noRepCar(const std::string &sentence);
+
+    static char firstRepCar(const std::string &sentense);
 };
 
 

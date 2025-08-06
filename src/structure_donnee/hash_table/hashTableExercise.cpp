@@ -15,6 +15,7 @@
 #include <string>
 #include <unordered_map>
 #include <stdexcept>
+#include <unordered_set>
 /*
  *fonction qui trouve le premier caractére non répéter
  */
@@ -29,4 +30,15 @@ char hashTableExercise::noRepCar(const std::string &sentence) {
         }
     }
     throw std::invalid_argument("Aucun caractère non répété trouvé.");
+}
+
+char hashTableExercise::firstRepCar(const std::string &sentense) {
+    std::pmr::unordered_set<char> presence;
+    for (char c: sentense) {
+        if(presence.find(c) != presence.end()) {
+            return c;
+        }
+        presence.insert(c);
+    }
+    throw std::invalid_argument("Aucun caractère répété trouvé.");
 }

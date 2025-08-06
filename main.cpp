@@ -27,7 +27,7 @@ int main() {
 */
 std::string sentense = "a green apple";
 
-    char result = hashTableExercise::noRepCar(sentense);
+    char result = hashTableExercise::firstRepCar(sentense);
 
     std::cout<< result;
 
