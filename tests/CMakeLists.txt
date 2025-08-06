@@ -8,6 +8,7 @@ add_executable(tests
         ArrayQueueTest.cpp
         StackQueueTest.cpp
         PriorityQueueTest.cpp
+        HashTableLLTest.cpp
 )
 
 target_link_libraries(tests
