@@ -13,9 +13,12 @@
 #ifndef LINK_LIST_H
 #define LINK_LIST_H
 
+#include <stdexcept>
+
+
 
 template<typename T>
-class link_list {
+class Link_List {
 private:
     struct node {
         T value;
@@ -32,10 +35,10 @@ private:
     int count;
 
 public:
-    link_list(): first(nullptr), last(nullptr), count(0) {
+    Link_List(): first(nullptr), last(nullptr), count(0) {
     }
 
-    link_list(const link_list &other): first(nullptr), last(nullptr), count(0) {
+    Link_List(const Link_List &other): first(nullptr), last(nullptr), count(0) {
         auto iter = other.first;
         while (iter != nullptr) {
             addLast(iter->value);
@@ -43,7 +46,7 @@ public:
         }
     }
 
-    ~link_list() {
+    ~Link_List() {
         while (first != nullptr) {
             deleteFirst();
         }

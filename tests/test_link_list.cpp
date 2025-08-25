@@ -14,11 +14,11 @@
 #include <structure_donnee/link_list/Link_List.h>
 
 TEST(LinkListTest, constructeur) {
-    EXPECT_NO_THROW(link_list<int> lst{};);
+    EXPECT_NO_THROW(Link_List<int> lst{};);
 }
 
 TEST(LinkListTest, addFirst) {
-    link_list<int> lst{};
+    Link_List<int> lst{};
     lst.addFirst(1);
     lst.addFirst(2);
     EXPECT_EQ(lst.indexOf(2), 0);
@@ -26,7 +26,7 @@ TEST(LinkListTest, addFirst) {
 
 
 TEST(LinkListTest, addLast) {
-    link_list<int> lst{};
+    Link_List<int> lst{};
     lst.addFirst(1);
     lst.addFirst(2);
     lst.addLast(3);
@@ -34,7 +34,7 @@ TEST(LinkListTest, addLast) {
 }
 
 TEST(LinkListTest, contains) {
-    link_list<int> lst{};
+    Link_List<int> lst{};
     lst.addFirst(1);
     lst.addFirst(2);
     lst.addLast(3);
@@ -44,7 +44,7 @@ TEST(LinkListTest, contains) {
 }
 
 TEST(LinkListTest, deleteFirstLast) {
-    link_list<int> lst{};
+    Link_List<int> lst{};
     EXPECT_ANY_THROW(lst.deleteLast());
     EXPECT_ANY_THROW(lst.deleteFirst());
     lst.addFirst(1);
@@ -62,13 +62,13 @@ TEST(LinkListTest, deleteFirstLast) {
 }
 
 TEST(LinkListTest, constructeurDeCopie) {
-    link_list<int> original;
+    Link_List<int> original;
 
     original.addLast(10);
     original.addLast(20);
     original.addLast(30);
 
-    link_list<int> copy(original);
+    Link_List<int> copy(original);
 
 
     EXPECT_TRUE(copy.contains(10));
@@ -85,7 +85,7 @@ TEST(LinkListTest, constructeurDeCopie) {
 }
 
 TEST(LinkListTest, reverse) {
-    link_list<int> lst;
+    Link_List<int> lst;
 
     lst.addLast(10);
     lst.addLast(20);
@@ -101,7 +101,7 @@ TEST(LinkListTest, reverse) {
 }
 
 TEST(LinkListTest, getKthFromTheEnd) {
-    link_list<int> lst;
+    Link_List<int> lst;
     EXPECT_ANY_THROW(lst.getKthFromTheEnd(0));
 
     lst.addLast(10);

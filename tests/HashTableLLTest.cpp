@@ -15,5 +15,5 @@
 #include "structure_donnee/hash_table/HashTableLL.h"
 
 TEST(HashTableLLTest, constructeur) {
-    
+
 }
