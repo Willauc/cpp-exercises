@@ -37,9 +37,29 @@ TEST(HashTableLLTest, putGet) {
     EXPECT_EQ(table.get(2), "merci");
     EXPECT_EQ(table.get(22), "bonjour");
 
+    table.put(11, "montreal");
+    EXPECT_EQ(table.get(11), "montreal");
+
+
 
 
     EXPECT_ANY_THROW(table.get(9));
+}
+
+TEST(HashTableLLTest, remove) {
+    HashTableLL table{};
+
+    table.put(11, "allo");
+    table.put(5, "bye");
+    table.put(2, "merci");
+    table.put(22, "bonjour" );
+
+    table.remove(11);
+    EXPECT_ANY_THROW(table.get(11));
+    EXPECT_ANY_THROW(table.remove(11));
+
+
+
 }
 
 

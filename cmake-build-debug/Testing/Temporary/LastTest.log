@@ -1,21 +1,23 @@
-Start testing: Aug 26 09:30 Est (heure d’été)
+Start testing: Aug 26 09:42 Est (heure d’été)
 ----------------------------------------------------------
 1/1 Testing: MyStructureDonneeTest
 1/1 Test: MyStructureDonneeTest
 Command: "C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/cmake-build-debug/tests/tests.exe"
 Directory: C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/cmake-build-debug/tests
-"MyStructureDonneeTest" start time: Aug 26 09:30 Est (heure d’été)
+"MyStructureDonneeTest" start time: Aug 26 09:42 Est (heure d’été)
 Output:
 ----------------------------------------------------------
 Running main() from C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/src/gtest_main.cc
-[==========] Running 33 tests from 7 test suites.
+[==========] Running 34 tests from 7 test suites.
 [----------] Global test environment set-up.
-[----------] 2 tests from HashTableLLTest
+[----------] 3 tests from HashTableLLTest
 [ RUN      ] HashTableLLTest.constructeur
 [       OK ] HashTableLLTest.constructeur (0 ms)
 [ RUN      ] HashTableLLTest.putGet
 [       OK ] HashTableLLTest.putGet (0 ms)
-[----------] 2 tests from HashTableLLTest (0 ms total)
+[ RUN      ] HashTableLLTest.remove
+[       OK ] HashTableLLTest.remove (0 ms)
+[----------] 3 tests from HashTableLLTest (0 ms total)
 
 [----------] 2 tests from PriorityQueueTest
 [ RUN      ] PriorityQueueTest.constructeur
@@ -98,14 +100,14 @@ Running main() from C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercise
 [----------] 13 tests from MyArrayTest (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 33 tests from 7 test suites ran. (0 ms total)
-[  PASSED  ] 33 tests.
+[==========] 34 tests from 7 test suites ran. (0 ms total)
+[  PASSED  ] 34 tests.
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"MyStructureDonneeTest" end time: Aug 26 09:30 Est (heure d’été)
+"MyStructureDonneeTest" end time: Aug 26 09:42 Est (heure d’été)
 "MyStructureDonneeTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Aug 26 09:30 Est (heure d’été)
+End testing: Aug 26 09:42 Est (heure d’été)

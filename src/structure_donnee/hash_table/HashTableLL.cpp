@@ -17,8 +17,13 @@
 HashTableLL::~HashTableLL() = default;
 
 void HashTableLL::put(int key, const std::string &value) {
-    entry to_add(key, value);
     size_t index = key % m_vector.size();
+    entry to_add(key, value);
+    size_t indexInterne = m_vector[index].indexOf(to_add);
+    if (indexInterne != -1) {
+        m_vector[index].deleteIndex(indexInterne);
+    }
+
     m_vector[index].addLast(to_add);
 }
 
@@ -30,11 +35,17 @@ std::string HashTableLL::get(int key) const {
         throw std::out_of_range("Valeur non presente.");
     }
     return m_vector[index].getIndex(indexInterne).value;
-
-
 }
 
 void HashTableLL::remove(int key) {
+    size_t index = key % m_vector.size();
+    size_t indexInterne = m_vector[index].indexOf(entry(key, ""));
+
+    if (indexInterne == -1) {
+        throw std::out_of_range("Valeur non presente.");
+    }
+
+    m_vector[index].deleteIndex(indexInterne);
 }
 
 bool HashTableLL::is_prime(size_t n) {
