@@ -16,7 +16,6 @@
 #include <stdexcept>
 
 
-
 template<typename T>
 class Link_List {
 private:
@@ -138,7 +137,7 @@ public:
         return -1;
     }
 
-    bool isEmpty() {
+    bool isEmpty() const {
         return first == nullptr;
     }
 
@@ -163,17 +162,17 @@ public:
 
     T getKthFromTheEnd(int k) {
         if (isEmpty()) {
-            throw std::out_of_range("List vide.") ;
+            throw std::out_of_range("List vide.");
         }
         if (k >= count || k < 0) {
-            throw std::out_of_range(" Valeur demander hors list.");
+            throw std::out_of_range("Valeur demandée hors liste.");
         }
         if (k == 0) {
             return last->value;
         }
         auto iter = first;
         auto iter2 = first;
-        for (int i =0; i < k; i++) {
+        for (int i = 0; i < k; i++) {
             iter2 = iter2->next;
         }
         while (iter2 != last) {
@@ -183,21 +182,52 @@ public:
         return iter->value;
     }
 
-    T getIndex(int index) {
+    const T getIndex(int index) const {
         if (isEmpty()) {
-            throw std::out_of_range("List vide.") ;
+            throw std::out_of_range("List vide.");
         }
         if (index >= count || index < 0) {
-            throw std::out_of_range(" Valeur demander hors list.");
+            throw std::out_of_range("Valeur demandée hors liste.");
         }
         if (index == 0) {
             return first->value;
         }
         auto iter = first;
-        for (int i = 0; i < index ; i++) {
+        for (int i = 0; i < index; i++) {
             iter = iter->next;
         }
         return iter->value;
+    }
+
+    void deleteIndex(int index) {
+        if (isEmpty()) {
+            throw std::out_of_range("List vide.");
+        }
+        if (index >= count || index < 0) {
+            throw std::out_of_range("Valeur demandée hors liste.");
+        }
+        if (index == 0) {
+            deleteFirst();
+            return;
+        }
+        if (index == (count - 1)) {
+            deleteLast();
+            return;
+        }
+        auto courant = first->next;
+        auto precedent = first;
+        int i = 1;
+
+        while (i != index) {
+            courant = courant->next;
+            precedent = precedent->next;
+            i++;
+        }
+
+        precedent->next = courant->next;
+        delete courant;
+        count--;
+
     }
 };
 

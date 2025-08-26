@@ -18,18 +18,18 @@ HashTableLL::~HashTableLL() = default;
 
 void HashTableLL::put(int key, const std::string &value) {
     entry to_add(key, value);
-    size_t index = key % m_lst.size();
-    m_lst[index].addLast(to_add);
+    size_t index = key % m_vector.size();
+    m_vector[index].addLast(to_add);
 }
 
 std::string HashTableLL::get(int key) const {
-    size_t index = key % m_lst.size();
-    size_t indexInterne = m_lst[index].indexOf(entry(key, ""));
+    size_t index = key % m_vector.size();
+    size_t indexInterne = m_vector[index].indexOf(entry(key, ""));
 
     if (indexInterne == -1) {
-        return "";
+        throw std::out_of_range("Valeur non presente.");
     }
-    for ()
+    return m_vector[index].getIndex(indexInterne).value;
 
 
 }
@@ -51,4 +51,8 @@ size_t HashTableLL::next_prime(size_t n) {
         ++n;
     }
     return n;
+}
+
+size_t HashTableLL::getSize() const {
+    return m_vector.size();
 }

@@ -9,6 +9,7 @@ add_executable(tests
         StackQueueTest.cpp
         PriorityQueueTest.cpp
         HashTableLLTest.cpp
+        ../src/structure_donnee/hash_table/HashTableLL.cpp
 )
 
 target_link_libraries(tests

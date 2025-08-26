@@ -15,5 +15,32 @@
 #include "structure_donnee/hash_table/HashTableLL.h"
 
 TEST(HashTableLLTest, constructeur) {
+    EXPECT_NO_THROW(HashTableLL table{});
+    HashTableLL table{};
+    EXPECT_EQ(table.getSize(), 11);
 
+    EXPECT_NO_THROW(HashTableLL table2{21});
+    HashTableLL table2{21};
+    EXPECT_EQ(table2.getSize(), 23);
 }
+
+TEST(HashTableLLTest, putGet) {
+    HashTableLL table{};
+
+    table.put(11, "allo");
+    table.put(5, "bye");
+    table.put(2, "merci");
+    table.put(22, "bonjour" );
+
+    EXPECT_EQ(table.get(11), "allo");
+    EXPECT_EQ(table.get(5), "bye");
+    EXPECT_EQ(table.get(2), "merci");
+    EXPECT_EQ(table.get(22), "bonjour");
+
+
+
+    EXPECT_ANY_THROW(table.get(9));
+}
+
+
+

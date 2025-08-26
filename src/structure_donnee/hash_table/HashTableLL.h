@@ -27,6 +27,7 @@ struct entry {
     bool operator==(const entry &other) const {
         return key == other.key;
     }
+
     bool operator==(const int other) const {
         return key == other;
     }
@@ -34,11 +35,16 @@ struct entry {
 
 class HashTableLL {
 private:
-    std::vector<Link_List<entry> > m_lst;
+    std::vector<Link_List<entry> > m_vector;
+
+    static bool is_prime(size_t n);
+
+    static size_t next_prime(size_t n);
 
 public:
     HashTableLL(size_t size = 11)
-    : m_lst(is_prime(size) ? size : next_prime(size)) {}
+        : m_vector(is_prime(size) ? size : next_prime(size)) {
+    }
 
     ~HashTableLL();
 
@@ -48,9 +54,7 @@ public:
 
     void remove(int key);
 
-    bool is_prime(size_t n);
-
-    size_t next_prime(size_t n);
+    size_t getSize() const;
 };
 
 

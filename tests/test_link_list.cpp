@@ -133,3 +133,26 @@ TEST(LinkListTest, getIndex) {
 
     EXPECT_ANY_THROW(lst.getIndex(4));
 }
+
+TEST(LinkListTest, deleteIndex) {
+    Link_List<int> lst;
+
+    lst.addLast(10);
+    lst.addLast(20);
+    lst.addLast(30);
+    lst.addLast(40);
+
+    EXPECT_EQ(lst.getIndex(0), 10);
+    EXPECT_EQ(lst.getIndex(1), 20);
+    EXPECT_EQ(lst.getIndex(2), 30);
+    EXPECT_EQ(lst.getIndex(3), 40);
+
+    lst.deleteIndex(1);
+    EXPECT_EQ(lst.getIndex(1), 30);
+
+    lst.deleteIndex(0);
+    EXPECT_EQ(lst.getIndex(0), 30);
+
+
+    EXPECT_ANY_THROW(lst.deleteIndex(4));
+}
