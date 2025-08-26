@@ -17,7 +17,7 @@
 HashTableLL::~HashTableLL() = default;
 
 void HashTableLL::put(int key, const std::string &value) {
-    size_t index = key % m_vector.size();
+    size_t index = hash(key);
     entry to_add(key, value);
     size_t indexInterne = m_vector[index].indexOf(to_add);
     if (indexInterne != -1) {
@@ -28,7 +28,7 @@ void HashTableLL::put(int key, const std::string &value) {
 }
 
 std::string HashTableLL::get(int key) const {
-    size_t index = key % m_vector.size();
+    size_t index = hash(key);
     size_t indexInterne = m_vector[index].indexOf(entry(key, ""));
 
     if (indexInterne == -1) {
@@ -38,7 +38,7 @@ std::string HashTableLL::get(int key) const {
 }
 
 void HashTableLL::remove(int key) {
-    size_t index = key % m_vector.size();
+    size_t index = hash(key);
     size_t indexInterne = m_vector[index].indexOf(entry(key, ""));
 
     if (indexInterne == -1) {
@@ -66,4 +66,8 @@ size_t HashTableLL::next_prime(size_t n) {
 
 size_t HashTableLL::getSize() const {
     return m_vector.size();
+}
+
+int HashTableLL::hash(int key) const {
+    return key % m_vector.size();
 }

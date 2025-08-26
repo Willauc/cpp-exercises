@@ -41,6 +41,8 @@ private:
 
     static size_t next_prime(size_t n);
 
+    int hash(int key) const;
+
 public:
     HashTableLL(size_t size = 11)
         : m_vector(is_prime(size) ? size : next_prime(size)) {
