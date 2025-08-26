@@ -182,6 +182,23 @@ public:
         }
         return iter->value;
     }
+
+    T getIndex(int index) {
+        if (isEmpty()) {
+            throw std::out_of_range("List vide.") ;
+        }
+        if (index >= count || index < 0) {
+            throw std::out_of_range(" Valeur demander hors list.");
+        }
+        if (index == 0) {
+            return first->value;
+        }
+        auto iter = first;
+        for (int i = 0; i < index ; i++) {
+            iter = iter->next;
+        }
+        return iter->value;
+    }
 };
 
 

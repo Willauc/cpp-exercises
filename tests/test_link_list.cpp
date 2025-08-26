@@ -116,3 +116,20 @@ TEST(LinkListTest, getKthFromTheEnd) {
 
     EXPECT_ANY_THROW(lst.getKthFromTheEnd(4));
 }
+
+TEST(LinkListTest, getIndex) {
+    Link_List<int> lst;
+    EXPECT_ANY_THROW(lst.getIndex(0));
+
+    lst.addLast(10);
+    lst.addLast(20);
+    lst.addLast(30);
+    lst.addLast(40);
+
+    EXPECT_EQ(lst.getIndex(0), 10);
+    EXPECT_EQ(lst.getIndex(1), 20);
+    EXPECT_EQ(lst.getIndex(2), 30);
+    EXPECT_EQ(lst.getIndex(3), 40);
+
+    EXPECT_ANY_THROW(lst.getIndex(4));
+}
