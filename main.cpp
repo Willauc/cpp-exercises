@@ -15,6 +15,7 @@
 #include <queue>
 #include "src/structure_donnee/queue/QueueExercise.cpp"
 #include "src/structure_donnee/hash_table/hashTableExercise.h"
+#include "src/structure_donnee/tree/Tree.h"
 int main() {
     /*
     std::vector<std::vector<std::string>> vector = {
@@ -25,11 +26,18 @@ int main() {
 
     affichage_matrice_v3(vector);
 */
-std::string sentense = "a green apple";
 
-    char result = hashTableExercise::firstRepCar(sentense);
+Tree tree;
+    tree.insert(5);
+    tree.insert(4);
+    tree.insert(3);
+    tree.insert(6);
+    tree.insert(8);
+    tree.insert(7);
+    tree.printTree();
+    std::cout<<tree.find(6)<<std::endl;
+    std::cout<<tree.find(1)<<std::endl;
 
-    std::cout<< result;
 
 
     return 0;
