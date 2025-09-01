@@ -16,3 +16,20 @@
 TEST(TreeTest, constructeur) {
     EXPECT_NO_THROW(Tree tree);
 }
+
+TEST(TreeTest, insert) {
+    Tree tree;
+
+    EXPECT_FALSE(tree.find(10));
+    tree.insert(10);
+    EXPECT_TRUE(tree.find(10));
+
+    EXPECT_FALSE(tree.find(11));
+    tree.insert(11);
+    EXPECT_TRUE(tree.find(11));
+
+    EXPECT_FALSE(tree.find(9));
+    tree.insert(9);
+    EXPECT_TRUE(tree.find(9));
+
+}
