@@ -87,8 +87,7 @@ bool Tree::find(int value) const {
         if (curent->value < value) {
             if (curent->right == nullptr) {return false;}
             curent = curent->right;
-        }
-        if (value < curent->value) {
+        }else {
             if (curent->left == nullptr) {return false;}
             curent = curent->left;
         }
