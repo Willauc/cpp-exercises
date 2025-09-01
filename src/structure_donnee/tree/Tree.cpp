@@ -19,6 +19,35 @@ Tree::Tree() : root(nullptr) {
 Tree::~Tree() = default;
 
 void Tree::insert(int value) {
+    auto to_add = std::make_shared<Node>(value);
+
+    if (root == nullptr) {
+        root = to_add;
+    }else {
+        auto curent = root;
+
+        while (true) {
+            if (value == curent->value) {
+                break;
+            } else if (value < curent->value) {
+                if (curent->left == nullptr) {
+                    curent->left = to_add;
+                    break;
+                }
+                curent = curent->left;
+            }else {
+                if (curent->right == nullptr) {
+                    curent->right = to_add;
+                }
+                curent = curent->right;
+            }
+
+        }
+
+    }
+}
+/*
+void Tree::insert(int value) {
 
     if (root == nullptr) {
         root = std::make_unique<Node>(value);
@@ -44,7 +73,27 @@ void Tree::insertUnder( std::unique_ptr<Node>& node, int toAdd) {
         }
     }
 }
+*/
+bool Tree::find(int value) const {
+    auto curent = root;
 
+    while (true) {
+        if (curent == nullptr) {
+            return false;
+        }
+        if (curent->value == value) {
+            return true;
+        }
+        if (curent->value < value) {
+            curent = curent->right;
+        }
+        if (value < curent->value) {
+            curent = curent->left;
+        }
+    }
+
+}
+/*
 bool Tree::find(int value) const {
     return m_find (root.get(), value);
 }
@@ -57,7 +106,7 @@ bool Tree::m_find(const Node *node, int value) const {
     if (node->value > value) return m_find(node->left.get(), value);
     return false;
 }
-
+*/
 void Tree::printTree() const {
     printNodes(root.get());
 

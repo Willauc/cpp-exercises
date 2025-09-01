@@ -1,0 +1,326 @@
+{
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/4.0.2/CMakeSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-Initialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/4.0.2/CMakeCCompiler.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "cmake-build-debug/CMakeFiles/4.0.2/CMakeCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/UnixPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeCLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Linker/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Linker/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Linker/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU.cmake"
+		},
+		{
+			"path" : "extern/googletest/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakeDependentOption.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/GNUInstallDirs.cmake"
+		},
+		{
+			"path" : "extern/googletest/googlemock/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "extern/googletest/googlemock/cmake/gmock.pc.in"
+		},
+		{
+			"path" : "extern/googletest/googlemock/cmake/gmock_main.pc.in"
+		},
+		{
+			"path" : "extern/googletest/googletest/CMakeLists.txt"
+		},
+		{
+			"path" : "extern/googletest/googletest/cmake/internal_utils.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/CheckIncludeFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/CheckCSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/CMakePackageConfigHelpers.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/WriteBasicConfigVersionFile.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/snap/clion/371/bin/cmake/linux/x64/share/cmake-4.0/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in"
+		},
+		{
+			"path" : "extern/googletest/googletest/cmake/Config.cmake.in"
+		},
+		{
+			"path" : "extern/googletest/googletest/cmake/gtest.pc.in"
+		},
+		{
+			"path" : "extern/googletest/googletest/cmake/gtest_main.pc.in"
+		},
+		{
+			"path" : "tests/CMakeLists.txt"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "/home/william/Documents/GitHub/cpp-exercises/cmake-build-debug",
+		"source" : "/home/william/Documents/GitHub/cpp-exercises"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 1
+	}
+}

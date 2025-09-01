@@ -19,20 +19,20 @@ class Tree {
 private:
     struct Node {
         int value;
-        std::unique_ptr<Node> right;
-        std::unique_ptr<Node> left;
+        std::shared_ptr<Node> right;
+        std::shared_ptr<Node> left;
 
         explicit Node(int p_value) : value(p_value), right(nullptr), left(nullptr) {
         }
     };
 
-    std::unique_ptr<Node> root;
+    std::shared_ptr<Node> root;
 
-    void insertUnder(std::unique_ptr<Node> &node, int toAdd);
+    //void insertUnder(std::unique_ptr<Node> &node, int toAdd);
 
     void printNodes(const Node *node) const;
 
-    bool m_find(const Node *node, int value) const;
+    //bool m_find(const Node *node, int value) const;
 
 public:
     Tree();

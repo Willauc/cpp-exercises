@@ -1,0 +1,11 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/william/Documents/GitHub/cpp-exercises/cmake-build-debug/cmake_install.cmake",
+		"/home/william/Documents/GitHub/cpp-exercises/cmake-build-debug/extern/googletest/cmake_install.cmake",
+		"/home/william/Documents/GitHub/cpp-exercises/cmake-build-debug/extern/googletest/googlemock/cmake_install.cmake",
+		"/home/william/Documents/GitHub/cpp-exercises/cmake-build-debug/extern/googletest/googletest/cmake_install.cmake",
+		"/home/william/Documents/GitHub/cpp-exercises/cmake-build-debug/tests/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

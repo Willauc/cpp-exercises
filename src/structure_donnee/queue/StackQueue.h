@@ -9,7 +9,7 @@
   Version     : 1.0
   ========================================================================
 */
-#include "C:\Users\tzar_\OneDrive\Bureau\python-exercises\cpp-exercises\src\structure_donnee\stack\Stack.h"
+#include "structure_donnee/stack/Stack.h"
 
 #ifndef STACKQUEUE_H
 #define STACKQUEUE_H
