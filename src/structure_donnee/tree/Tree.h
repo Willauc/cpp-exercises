@@ -28,11 +28,11 @@ private:
 
     std::shared_ptr<Node> root;
 
-    //void insertUnder(std::unique_ptr<Node> &node, int toAdd);
 
     void printNodes(const Node *node) const;
 
-    //bool m_find(const Node *node, int value) const;
+    bool isEqual(const std::shared_ptr<Node>& root, const std::shared_ptr<Node>& otherRoot );
+
 
 public:
     Tree();
@@ -44,6 +44,8 @@ public:
     bool find(int value) const;
 
     void printTree() const;
+
+    bool isEqual(const Tree& other);
 };
 
 

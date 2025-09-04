@@ -1,15 +1,84 @@
-Start testing: Sep 01 15:42 EDT
+Start testing: Sep 04 15:23 Est (heure d’été)
 ----------------------------------------------------------
 1/1 Testing: MyStructureDonneeTest
 1/1 Test: MyStructureDonneeTest
-Command: "/home/william/Documents/GitHub/cpp-exercises/cmake-build-debug/tests/tests"
-Directory: /home/william/Documents/GitHub/cpp-exercises/cmake-build-debug/tests
-"MyStructureDonneeTest" start time: Sep 01 15:42 EDT
+Command: "C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/cmake-build-debug/tests/tests.exe"
+Directory: C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/cmake-build-debug/tests
+"MyStructureDonneeTest" start time: Sep 04 15:23 Est (heure d’été)
 Output:
 ----------------------------------------------------------
-Running main() from /home/william/Documents/GitHub/cpp-exercises/extern/googletest/googletest/src/gtest_main.cc
-[==========] Running 36 tests from 8 test suites.
+Running main() from C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/src/gtest_main.cc
+[==========] Running 37 tests from 8 test suites.
 [----------] Global test environment set-up.
+[----------] 3 tests from TreeTest
+[ RUN      ] TreeTest.constructeur
+[       OK ] TreeTest.constructeur (0 ms)
+[ RUN      ] TreeTest.insert
+[       OK ] TreeTest.insert (0 ms)
+[ RUN      ] TreeTest.isEqual
+[       OK ] TreeTest.isEqual (0 ms)
+[----------] 3 tests from TreeTest (0 ms total)
+
+[----------] 3 tests from HashTableLLTest
+[ RUN      ] HashTableLLTest.constructeur
+[       OK ] HashTableLLTest.constructeur (0 ms)
+[ RUN      ] HashTableLLTest.putGet
+[       OK ] HashTableLLTest.putGet (0 ms)
+[ RUN      ] HashTableLLTest.remove
+[       OK ] HashTableLLTest.remove (0 ms)
+[----------] 3 tests from HashTableLLTest (0 ms total)
+
+[----------] 2 tests from PriorityQueueTest
+[ RUN      ] PriorityQueueTest.constructeur
+[       OK ] PriorityQueueTest.constructeur (0 ms)
+[ RUN      ] PriorityQueueTest.enqueueDequeue
+[       OK ] PriorityQueueTest.enqueueDequeue (0 ms)
+[----------] 2 tests from PriorityQueueTest (0 ms total)
+
+[----------] 2 tests from StackQueueTest
+[ RUN      ] StackQueueTest.constructeur
+[       OK ] StackQueueTest.constructeur (0 ms)
+[ RUN      ] StackQueueTest.enqueueDequeue
+[       OK ] StackQueueTest.enqueueDequeue (0 ms)
+[----------] 2 tests from StackQueueTest (0 ms total)
+
+[----------] 2 tests from ArrayQueuetest
+[ RUN      ] ArrayQueuetest.constructeur
+[       OK ] ArrayQueuetest.constructeur (0 ms)
+[ RUN      ] ArrayQueuetest.enqueueDequeue
+[       OK ] ArrayQueuetest.enqueueDequeue (0 ms)
+[----------] 2 tests from ArrayQueuetest (0 ms total)
+
+[----------] 2 tests from StackTest
+[ RUN      ] StackTest.constructeur
+[       OK ] StackTest.constructeur (0 ms)
+[ RUN      ] StackTest.getCountPeekIsEmpty
+[       OK ] StackTest.getCountPeekIsEmpty (0 ms)
+[----------] 2 tests from StackTest (0 ms total)
+
+[----------] 10 tests from LinkListTest
+[ RUN      ] LinkListTest.constructeur
+[       OK ] LinkListTest.constructeur (0 ms)
+[ RUN      ] LinkListTest.addFirst
+[       OK ] LinkListTest.addFirst (0 ms)
+[ RUN      ] LinkListTest.addLast
+[       OK ] LinkListTest.addLast (0 ms)
+[ RUN      ] LinkListTest.contains
+[       OK ] LinkListTest.contains (0 ms)
+[ RUN      ] LinkListTest.deleteFirstLast
+[       OK ] LinkListTest.deleteFirstLast (0 ms)
+[ RUN      ] LinkListTest.constructeurDeCopie
+[       OK ] LinkListTest.constructeurDeCopie (0 ms)
+[ RUN      ] LinkListTest.reverse
+[       OK ] LinkListTest.reverse (0 ms)
+[ RUN      ] LinkListTest.getKthFromTheEnd
+[       OK ] LinkListTest.getKthFromTheEnd (0 ms)
+[ RUN      ] LinkListTest.getIndex
+[       OK ] LinkListTest.getIndex (0 ms)
+[ RUN      ] LinkListTest.deleteIndex
+[       OK ] LinkListTest.deleteIndex (0 ms)
+[----------] 10 tests from LinkListTest (0 ms total)
+
 [----------] 13 tests from MyArrayTest
 [ RUN      ] MyArrayTest.InsertAndGet
 [       OK ] MyArrayTest.InsertAndGet (0 ms)
@@ -39,82 +108,15 @@ Running main() from /home/william/Documents/GitHub/cpp-exercises/extern/googlete
 [       OK ] MyArrayTest.InsertionExeption (0 ms)
 [----------] 13 tests from MyArrayTest (0 ms total)
 
-[----------] 10 tests from LinkListTest
-[ RUN      ] LinkListTest.constructeur
-[       OK ] LinkListTest.constructeur (0 ms)
-[ RUN      ] LinkListTest.addFirst
-[       OK ] LinkListTest.addFirst (0 ms)
-[ RUN      ] LinkListTest.addLast
-[       OK ] LinkListTest.addLast (0 ms)
-[ RUN      ] LinkListTest.contains
-[       OK ] LinkListTest.contains (0 ms)
-[ RUN      ] LinkListTest.deleteFirstLast
-[       OK ] LinkListTest.deleteFirstLast (0 ms)
-[ RUN      ] LinkListTest.constructeurDeCopie
-[       OK ] LinkListTest.constructeurDeCopie (0 ms)
-[ RUN      ] LinkListTest.reverse
-[       OK ] LinkListTest.reverse (0 ms)
-[ RUN      ] LinkListTest.getKthFromTheEnd
-[       OK ] LinkListTest.getKthFromTheEnd (0 ms)
-[ RUN      ] LinkListTest.getIndex
-[       OK ] LinkListTest.getIndex (0 ms)
-[ RUN      ] LinkListTest.deleteIndex
-[       OK ] LinkListTest.deleteIndex (0 ms)
-[----------] 10 tests from LinkListTest (0 ms total)
-
-[----------] 2 tests from StackTest
-[ RUN      ] StackTest.constructeur
-[       OK ] StackTest.constructeur (0 ms)
-[ RUN      ] StackTest.getCountPeekIsEmpty
-[       OK ] StackTest.getCountPeekIsEmpty (0 ms)
-[----------] 2 tests from StackTest (0 ms total)
-
-[----------] 2 tests from ArrayQueuetest
-[ RUN      ] ArrayQueuetest.constructeur
-[       OK ] ArrayQueuetest.constructeur (0 ms)
-[ RUN      ] ArrayQueuetest.enqueueDequeue
-[       OK ] ArrayQueuetest.enqueueDequeue (0 ms)
-[----------] 2 tests from ArrayQueuetest (0 ms total)
-
-[----------] 2 tests from StackQueueTest
-[ RUN      ] StackQueueTest.constructeur
-[       OK ] StackQueueTest.constructeur (0 ms)
-[ RUN      ] StackQueueTest.enqueueDequeue
-[       OK ] StackQueueTest.enqueueDequeue (0 ms)
-[----------] 2 tests from StackQueueTest (0 ms total)
-
-[----------] 2 tests from PriorityQueueTest
-[ RUN      ] PriorityQueueTest.constructeur
-[       OK ] PriorityQueueTest.constructeur (0 ms)
-[ RUN      ] PriorityQueueTest.enqueueDequeue
-[       OK ] PriorityQueueTest.enqueueDequeue (0 ms)
-[----------] 2 tests from PriorityQueueTest (0 ms total)
-
-[----------] 3 tests from HashTableLLTest
-[ RUN      ] HashTableLLTest.constructeur
-[       OK ] HashTableLLTest.constructeur (0 ms)
-[ RUN      ] HashTableLLTest.putGet
-[       OK ] HashTableLLTest.putGet (0 ms)
-[ RUN      ] HashTableLLTest.remove
-[       OK ] HashTableLLTest.remove (0 ms)
-[----------] 3 tests from HashTableLLTest (0 ms total)
-
-[----------] 2 tests from TreeTest
-[ RUN      ] TreeTest.constructeur
-[       OK ] TreeTest.constructeur (0 ms)
-[ RUN      ] TreeTest.insert
-[       OK ] TreeTest.insert (0 ms)
-[----------] 2 tests from TreeTest (0 ms total)
-
 [----------] Global test environment tear-down
-[==========] 36 tests from 8 test suites ran. (0 ms total)
-[  PASSED  ] 36 tests.
+[==========] 37 tests from 8 test suites ran. (0 ms total)
+[  PASSED  ] 37 tests.
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"MyStructureDonneeTest" end time: Sep 01 15:42 EDT
+"MyStructureDonneeTest" end time: Sep 04 15:23 Est (heure d’été)
 "MyStructureDonneeTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Sep 01 15:42 EDT
+End testing: Sep 04 15:23 Est (heure d’été)

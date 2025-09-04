@@ -23,7 +23,7 @@ void Tree::insert(int value) {
 
     if (root == nullptr) {
         root = to_add;
-    }else {
+    } else {
         auto curent = root;
 
         while (true) {
@@ -35,45 +35,16 @@ void Tree::insert(int value) {
                     break;
                 }
                 curent = curent->left;
-            }else {
+            } else {
                 if (curent->right == nullptr) {
                     curent->right = to_add;
                 }
                 curent = curent->right;
             }
-
-        }
-
-    }
-}
-/*
-void Tree::insert(int value) {
-
-    if (root == nullptr) {
-        root = std::make_unique<Node>(value);
-    }else {
-        insertUnder(root, value);
-    }
-
-}
-
-void Tree::insertUnder( std::unique_ptr<Node>& node, int toAdd) {
-    if (node->value > toAdd) {
-        if (node->left == nullptr) {
-            node->left = std::make_unique<Node>(toAdd);
-        }else {
-            insertUnder(node->left, toAdd);
-        }
-
-    }else if (node->value < toAdd) {
-        if (node->right == nullptr) {
-            node->right = std::make_unique<Node>(toAdd);
-        }else {
-            insertUnder(node->right, toAdd);
         }
     }
 }
-*/
+
 bool Tree::find(int value) const {
     auto curent = root;
 
@@ -85,44 +56,29 @@ bool Tree::find(int value) const {
             return true;
         }
         if (curent->value < value) {
-            if (curent->right == nullptr) {return false;}
+            if (curent->right == nullptr) { return false; }
             curent = curent->right;
-        }else {
-            if (curent->left == nullptr) {return false;}
+        } else {
+            if (curent->left == nullptr) { return false; }
             curent = curent->left;
         }
     }
-
-}
-/*
-bool Tree::find(int value) const {
-    return m_find (root.get(), value);
 }
 
-bool Tree::m_find(const Node *node, int value) const {
-    if (!node) return false;
-
-    if(node->value == value) return true;
-    if (node->value < value) return m_find(node->right.get(), value);
-    if (node->value > value) return m_find(node->left.get(), value);
-    return false;
-}
-*/
 void Tree::printTree() const {
     printNodes(root.get());
-
 }
 
-void Tree::printNodes(const Node* node) const {
+void Tree::printNodes(const Node *node) const {
     if (!node) return;
 
     std::cout << "  " << node->value << std::endl;
 
     if (node->right || node->left) {
         std::cout << (node->left ? std::to_string(node->left->value) : "null")
-                  << "   "
-                  << (node->right ? std::to_string(node->right->value) : "null")
-                  << std::endl;
+                << "   "
+                << (node->right ? std::to_string(node->right->value) : "null")
+                << std::endl;
     }
 
     if (node->left) {
@@ -133,3 +89,21 @@ void Tree::printNodes(const Node* node) const {
     }
 }
 
+bool Tree::isEqual(const std::shared_ptr<Node> &root, const std::shared_ptr<Node> &otherRoot) {
+    if (root == nullptr) {
+        if (otherRoot == nullptr) {
+            return true;
+        }
+        return false;
+    }
+    if (root->value == otherRoot->value &&
+        isEqual(root->left, otherRoot->left) &&
+        isEqual(root->right, otherRoot->right)) {
+        return true;
+    }
+    return false;
+}
+
+bool Tree::isEqual(const Tree &other) {
+    return isEqual(root, other.root);
+}

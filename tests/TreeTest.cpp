@@ -33,3 +33,33 @@ TEST(TreeTest, insert) {
     EXPECT_TRUE(tree.find(9));
 
 }
+
+TEST(TreeTest, isEqual) {
+    Tree tree;
+    tree.insert(5);
+    tree.insert(4);
+    tree.insert(3);
+    tree.insert(6);
+    tree.insert(8);
+    tree.insert(7);
+
+    Tree tree2;
+    tree2.insert(5);
+    tree2.insert(4);
+    tree2.insert(3);
+    tree2.insert(6);
+    tree2.insert(8);
+    tree2.insert(7);
+
+    EXPECT_TRUE(tree.isEqual(tree2));
+
+    Tree tree3;
+    tree3.insert(5);
+    tree3.insert(11);
+    tree3.insert(3);
+    tree3.insert(6);
+    tree3.insert(8);
+    tree3.insert(54);
+
+    EXPECT_FALSE(tree.isEqual(tree3));
+}
