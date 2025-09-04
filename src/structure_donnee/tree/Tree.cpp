@@ -90,13 +90,11 @@ void Tree::printNodes(const Node *node) const {
 }
 
 bool Tree::isEqual(const std::shared_ptr<Node> &root, const std::shared_ptr<Node> &otherRoot) {
-    if (root == nullptr) {
-        if (otherRoot == nullptr) {
-            return true;
-        }
-        return false;
+    if (root == nullptr && otherRoot == nullptr) {
+        return true;
     }
-    if (root->value == otherRoot->value &&
+    if (root != nullptr && otherRoot != nullptr &&
+        root->value == otherRoot->value &&
         isEqual(root->left, otherRoot->left) &&
         isEqual(root->right, otherRoot->right)) {
         return true;

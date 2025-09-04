@@ -1,10 +1,10 @@
-Start testing: Sep 04 15:23 Est (heure d’été)
+Start testing: Sep 04 15:30 Est (heure d’été)
 ----------------------------------------------------------
 1/1 Testing: MyStructureDonneeTest
 1/1 Test: MyStructureDonneeTest
 Command: "C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/cmake-build-debug/tests/tests.exe"
 Directory: C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/cmake-build-debug/tests
-"MyStructureDonneeTest" start time: Sep 04 15:23 Est (heure d’été)
+"MyStructureDonneeTest" start time: Sep 04 15:30 Est (heure d’été)
 Output:
 ----------------------------------------------------------
 Running main() from C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercises/extern/googletest/googletest/src/gtest_main.cc
@@ -115,8 +115,8 @@ Running main() from C:/Users/tzar_/OneDrive/Bureau/python-exercises/cpp-exercise
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"MyStructureDonneeTest" end time: Sep 04 15:23 Est (heure d’été)
+"MyStructureDonneeTest" end time: Sep 04 15:30 Est (heure d’été)
 "MyStructureDonneeTest" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Sep 04 15:23 Est (heure d’été)
+End testing: Sep 04 15:30 Est (heure d’été)

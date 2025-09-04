@@ -62,4 +62,13 @@ TEST(TreeTest, isEqual) {
     tree3.insert(54);
 
     EXPECT_FALSE(tree.isEqual(tree3));
+
+    Tree tree4;
+
+    EXPECT_FALSE(tree4.isEqual(tree3));
+
+    Tree tree5;
+
+    EXPECT_TRUE(tree4.isEqual(tree5));
+
 }
