@@ -33,6 +33,8 @@ private:
 
     bool isEqual(const std::shared_ptr<Node>& root, const std::shared_ptr<Node>& otherRoot );
 
+    bool isBinary(const std::shared_ptr<Node> &root, int min, int max) const;
+
 
 public:
     Tree();
@@ -46,7 +48,11 @@ public:
     void printTree() const;
 
     bool isEqual(const Tree& other);
+
+    bool isBinary() const;
+
 };
+
 
 
 #endif //TREE_H

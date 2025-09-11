@@ -72,3 +72,19 @@ TEST(TreeTest, isEqual) {
     EXPECT_TRUE(tree4.isEqual(tree5));
 
 }
+
+TEST(TreeTest, isBinary) {
+    Tree tree;
+
+    EXPECT_TRUE(tree.isBinary());
+
+    tree.insert(5);
+    tree.insert(4);
+    tree.insert(3);
+    tree.insert(6);
+    tree.insert(8);
+    tree.insert(7);
+
+    EXPECT_TRUE(tree.isBinary());
+
+}

@@ -12,6 +12,7 @@
 
 #include "Tree.h"
 #include <iostream>
+#include <limits>
 
 Tree::Tree() : root(nullptr) {
 };
@@ -104,4 +105,16 @@ bool Tree::isEqual(const std::shared_ptr<Node> &root, const std::shared_ptr<Node
 
 bool Tree::isEqual(const Tree &other) {
     return isEqual(root, other.root);
+}
+
+bool Tree::isBinary() const {
+    return isBinary(root, std::numeric_limits<int>::min(), std::numeric_limits<int>::max());
+}
+
+bool Tree::isBinary(const std::shared_ptr<Node> &root, int min, int max) const {
+    if (root == nullptr || (root->value > min && root->value < max &&
+                            isBinary(root->left, min, root->value) && isBinary(root->right, root->value, max))) {
+        return true;
+    }
+    return false;
 }

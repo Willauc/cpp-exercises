@@ -1,0 +1,29 @@
+# Dossiers de build CLion/CMake
+cmake-build-*/
+build/
+out/
+
+# Fichiers de CMake
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+install_manifest.txt
+compile_commands.json
+
+# CLion (JetBrains)
+.idea/
+*.iml
+
+# Binaires
+*.o
+*.a
+*.so
+*.exe
+*.out
+*.obj
+*.dll
+*.lib
+
+# Autres
+*.log
