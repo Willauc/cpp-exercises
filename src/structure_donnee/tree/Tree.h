@@ -35,7 +35,7 @@ private:
 
     bool isBinary(const std::shared_ptr<Node> &root, int min, int max) const;
 
-
+    void printNodeDistanceOfK(int distance, const std::shared_ptr<Node>& root) const;
 public:
     Tree();
 
@@ -50,6 +50,10 @@ public:
     bool isEqual(const Tree& other);
 
     bool isBinary() const;
+
+    void swarpRoot();
+
+    void printNodeDistanceOfK(int distance) const;
 
 };
 

@@ -1,2 +1,2 @@
-MyStructureDonneeTest 3 0.001874
+MyStructureDonneeTest 6 0.00153548
 ---

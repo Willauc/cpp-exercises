@@ -34,9 +34,11 @@ Tree tree;
     tree.insert(6);
     tree.insert(8);
     tree.insert(7);
-    tree.printTree();
-    std::cout<<tree.find(6)<<std::endl;
-    std::cout<<tree.find(1)<<std::endl;
+    //tree.printTree();
+    //std::cout<<tree.find(6)<<std::endl;
+    //std::cout<<tree.find(1)<<std::endl;
+
+    tree.printNodeDistanceOfK(2);
 
 
 

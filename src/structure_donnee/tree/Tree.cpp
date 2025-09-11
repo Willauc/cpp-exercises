@@ -118,3 +118,29 @@ bool Tree::isBinary(const std::shared_ptr<Node> &root, int min, int max) const {
     }
     return false;
 }
+
+void Tree::swarpRoot() {
+    if (!root) return;
+
+    std::swap(root->left, root->right);
+}
+
+void Tree::printNodeDistanceOfK(int distance, const std::shared_ptr<Node> &root) const {
+    if (root == nullptr) return;
+    if (distance == 0) {
+        std::cout << root->value << std::endl;
+
+    }else {
+        distance--;
+        if (root->left) {
+            printNodeDistanceOfK(distance, root->left);
+        }
+        if (root->right) {
+            printNodeDistanceOfK(distance, root->right);
+        }
+    }
+}
+
+void Tree::printNodeDistanceOfK(int distance) const {
+    printNodeDistanceOfK(distance, root);
+}

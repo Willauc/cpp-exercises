@@ -87,4 +87,7 @@ TEST(TreeTest, isBinary) {
 
     EXPECT_TRUE(tree.isBinary());
 
+    tree.swarpRoot();
+    EXPECT_FALSE(tree.isBinary());
+
 }
