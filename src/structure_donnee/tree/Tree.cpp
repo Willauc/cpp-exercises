@@ -129,16 +129,12 @@ void Tree::printNodeDistanceOfK(int distance, const std::shared_ptr<Node> &root)
     if (root == nullptr) return;
     if (distance == 0) {
         std::cout << root->value << std::endl;
-
-    }else {
-        distance--;
-        if (root->left) {
-            printNodeDistanceOfK(distance, root->left);
-        }
-        if (root->right) {
-            printNodeDistanceOfK(distance, root->right);
-        }
+        return;
     }
+    distance--;
+
+    printNodeDistanceOfK(distance, root->left);
+    printNodeDistanceOfK(distance, root->right);
 }
 
 void Tree::printNodeDistanceOfK(int distance) const {
