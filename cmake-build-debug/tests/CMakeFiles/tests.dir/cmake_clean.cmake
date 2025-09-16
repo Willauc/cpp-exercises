@@ -14,6 +14,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/tests.dir/__/src/structure_donnee/array/My_Array.cpp.o.d"
   "CMakeFiles/tests.dir/__/src/structure_donnee/hash_table/HashTableLL.cpp.o"
   "CMakeFiles/tests.dir/__/src/structure_donnee/hash_table/HashTableLL.cpp.o.d"
+  "CMakeFiles/tests.dir/__/src/structure_donnee/tree/AVLTree.cpp.o"
+  "CMakeFiles/tests.dir/__/src/structure_donnee/tree/AVLTree.cpp.o.d"
   "CMakeFiles/tests.dir/__/src/structure_donnee/tree/Tree.cpp.o"
   "CMakeFiles/tests.dir/__/src/structure_donnee/tree/Tree.cpp.o.d"
   "CMakeFiles/tests.dir/test_link_list.cpp.o"

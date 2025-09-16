@@ -22,6 +22,8 @@ add_executable(main
         src/structure_donnee/hash_table/HashTableLL.h
         src/structure_donnee/tree/Tree.cpp
         src/structure_donnee/tree/Tree.h
+        src/structure_donnee/tree/AVLTree.cpp
+        src/structure_donnee/tree/AVLTree.h
 
 
 )

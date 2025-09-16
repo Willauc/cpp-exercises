@@ -417,6 +417,30 @@ src/structure_donnee/stack/Expression.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/structure_donnee/stack/Expression.cpp.s
 .PHONY : src/structure_donnee/stack/Expression.cpp.s
 
+src/structure_donnee/tree/AVLTree.o: src/structure_donnee/tree/AVLTree.cpp.o
+.PHONY : src/structure_donnee/tree/AVLTree.o
+
+# target to build an object file
+src/structure_donnee/tree/AVLTree.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/structure_donnee/tree/AVLTree.cpp.o
+.PHONY : src/structure_donnee/tree/AVLTree.cpp.o
+
+src/structure_donnee/tree/AVLTree.i: src/structure_donnee/tree/AVLTree.cpp.i
+.PHONY : src/structure_donnee/tree/AVLTree.i
+
+# target to preprocess a source file
+src/structure_donnee/tree/AVLTree.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/structure_donnee/tree/AVLTree.cpp.i
+.PHONY : src/structure_donnee/tree/AVLTree.cpp.i
+
+src/structure_donnee/tree/AVLTree.s: src/structure_donnee/tree/AVLTree.cpp.s
+.PHONY : src/structure_donnee/tree/AVLTree.s
+
+# target to generate assembly for a file
+src/structure_donnee/tree/AVLTree.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/structure_donnee/tree/AVLTree.cpp.s
+.PHONY : src/structure_donnee/tree/AVLTree.cpp.s
+
 src/structure_donnee/tree/Tree.o: src/structure_donnee/tree/Tree.cpp.o
 .PHONY : src/structure_donnee/tree/Tree.o
 
@@ -481,6 +505,9 @@ help:
 	@echo "... src/structure_donnee/stack/Expression.o"
 	@echo "... src/structure_donnee/stack/Expression.i"
 	@echo "... src/structure_donnee/stack/Expression.s"
+	@echo "... src/structure_donnee/tree/AVLTree.o"
+	@echo "... src/structure_donnee/tree/AVLTree.i"
+	@echo "... src/structure_donnee/tree/AVLTree.s"
 	@echo "... src/structure_donnee/tree/Tree.o"
 	@echo "... src/structure_donnee/tree/Tree.i"
 	@echo "... src/structure_donnee/tree/Tree.s"

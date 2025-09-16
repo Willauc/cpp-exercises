@@ -12,6 +12,8 @@ add_executable(tests
         ../src/structure_donnee/hash_table/HashTableLL.cpp
         TreeTest.cpp
         ../src/structure_donnee/tree/Tree.cpp
+        ../src/structure_donnee/tree/AVLTree.cpp
+        ../src/structure_donnee/tree/AVLTree.h
 )
 
 target_link_libraries(tests

@@ -353,6 +353,30 @@ __/src/structure_donnee/hash_table/HashTableLL.cpp.s:
 	cd /home/william/Documents/GitHub/cpp-exercises/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/__/src/structure_donnee/hash_table/HashTableLL.cpp.s
 .PHONY : __/src/structure_donnee/hash_table/HashTableLL.cpp.s
 
+__/src/structure_donnee/tree/AVLTree.o: __/src/structure_donnee/tree/AVLTree.cpp.o
+.PHONY : __/src/structure_donnee/tree/AVLTree.o
+
+# target to build an object file
+__/src/structure_donnee/tree/AVLTree.cpp.o:
+	cd /home/william/Documents/GitHub/cpp-exercises/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/__/src/structure_donnee/tree/AVLTree.cpp.o
+.PHONY : __/src/structure_donnee/tree/AVLTree.cpp.o
+
+__/src/structure_donnee/tree/AVLTree.i: __/src/structure_donnee/tree/AVLTree.cpp.i
+.PHONY : __/src/structure_donnee/tree/AVLTree.i
+
+# target to preprocess a source file
+__/src/structure_donnee/tree/AVLTree.cpp.i:
+	cd /home/william/Documents/GitHub/cpp-exercises/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/__/src/structure_donnee/tree/AVLTree.cpp.i
+.PHONY : __/src/structure_donnee/tree/AVLTree.cpp.i
+
+__/src/structure_donnee/tree/AVLTree.s: __/src/structure_donnee/tree/AVLTree.cpp.s
+.PHONY : __/src/structure_donnee/tree/AVLTree.s
+
+# target to generate assembly for a file
+__/src/structure_donnee/tree/AVLTree.cpp.s:
+	cd /home/william/Documents/GitHub/cpp-exercises/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/__/src/structure_donnee/tree/AVLTree.cpp.s
+.PHONY : __/src/structure_donnee/tree/AVLTree.cpp.s
+
 __/src/structure_donnee/tree/Tree.o: __/src/structure_donnee/tree/Tree.cpp.o
 .PHONY : __/src/structure_donnee/tree/Tree.o
 
@@ -484,6 +508,9 @@ help:
 	@echo "... __/src/structure_donnee/hash_table/HashTableLL.o"
 	@echo "... __/src/structure_donnee/hash_table/HashTableLL.i"
 	@echo "... __/src/structure_donnee/hash_table/HashTableLL.s"
+	@echo "... __/src/structure_donnee/tree/AVLTree.o"
+	@echo "... __/src/structure_donnee/tree/AVLTree.i"
+	@echo "... __/src/structure_donnee/tree/AVLTree.s"
 	@echo "... __/src/structure_donnee/tree/Tree.o"
 	@echo "... __/src/structure_donnee/tree/Tree.i"
 	@echo "... __/src/structure_donnee/tree/Tree.s"
