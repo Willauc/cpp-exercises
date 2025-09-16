@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/tests.dir/link.d"
+  "CMakeFiles/tests.dir/AVLTreeTest.cpp.o"
+  "CMakeFiles/tests.dir/AVLTreeTest.cpp.o.d"
   "CMakeFiles/tests.dir/ArrayQueueTest.cpp.o"
   "CMakeFiles/tests.dir/ArrayQueueTest.cpp.o.d"
   "CMakeFiles/tests.dir/HashTableLLTest.cpp.o"

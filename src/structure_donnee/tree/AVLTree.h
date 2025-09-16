@@ -30,7 +30,7 @@ private:
 
     std::shared_ptr<Node> root;
 
-    void insert(Node toAdd);
+    void insert(std::shared_ptr<Node> &root, std::shared_ptr<Node> &toAdd);
 
 public:
     AVLTree();
@@ -38,6 +38,8 @@ public:
     ~AVLTree();
 
     void insert(int value);
+
+    bool find(int value) const;
 };
 
 

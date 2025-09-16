@@ -1,6 +1,6 @@
 /*
 ========================================================================
-  Fichier     : test_stack.cpp
+  Fichier     : TreeTest.cpp
   Auteur      : William Turbide Auclair
   Date        : 29 aout 2025
   Description : Exercice du cours "The Ultimate Data Structures & Algorithms: Part 1" de Mosh.

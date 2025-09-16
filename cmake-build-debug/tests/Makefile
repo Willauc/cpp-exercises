@@ -185,6 +185,30 @@ tests/fast:
 	cd /home/william/Documents/GitHub/cpp-exercises/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/build
 .PHONY : tests/fast
 
+AVLTreeTest.o: AVLTreeTest.cpp.o
+.PHONY : AVLTreeTest.o
+
+# target to build an object file
+AVLTreeTest.cpp.o:
+	cd /home/william/Documents/GitHub/cpp-exercises/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/AVLTreeTest.cpp.o
+.PHONY : AVLTreeTest.cpp.o
+
+AVLTreeTest.i: AVLTreeTest.cpp.i
+.PHONY : AVLTreeTest.i
+
+# target to preprocess a source file
+AVLTreeTest.cpp.i:
+	cd /home/william/Documents/GitHub/cpp-exercises/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/AVLTreeTest.cpp.i
+.PHONY : AVLTreeTest.cpp.i
+
+AVLTreeTest.s: AVLTreeTest.cpp.s
+.PHONY : AVLTreeTest.s
+
+# target to generate assembly for a file
+AVLTreeTest.cpp.s:
+	cd /home/william/Documents/GitHub/cpp-exercises/cmake-build-debug && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/tests.dir/build.make tests/CMakeFiles/tests.dir/AVLTreeTest.cpp.s
+.PHONY : AVLTreeTest.cpp.s
+
 ArrayQueueTest.o: ArrayQueueTest.cpp.o
 .PHONY : ArrayQueueTest.o
 
@@ -487,6 +511,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... tests"
+	@echo "... AVLTreeTest.o"
+	@echo "... AVLTreeTest.i"
+	@echo "... AVLTreeTest.s"
 	@echo "... ArrayQueueTest.o"
 	@echo "... ArrayQueueTest.i"
 	@echo "... ArrayQueueTest.s"

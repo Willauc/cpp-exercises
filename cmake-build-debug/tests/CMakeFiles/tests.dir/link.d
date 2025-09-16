@@ -13,6 +13,8 @@ tests: \
   CMakeFiles/tests.dir/__/src/structure_donnee/hash_table/HashTableLL.cpp.o \
   CMakeFiles/tests.dir/TreeTest.cpp.o \
   CMakeFiles/tests.dir/__/src/structure_donnee/tree/Tree.cpp.o \
+  CMakeFiles/tests.dir/__/src/structure_donnee/tree/AVLTree.cpp.o \
+  CMakeFiles/tests.dir/AVLTreeTest.cpp.o \
   ../lib/libgtest.a \
   ../lib/libgtest_main.a \
   /usr/lib/gcc/x86_64-linux-gnu/13/../../../x86_64-linux-gnu/libpthread.a \
@@ -72,6 +74,10 @@ CMakeFiles/tests.dir/__/src/structure_donnee/hash_table/HashTableLL.cpp.o:
 CMakeFiles/tests.dir/TreeTest.cpp.o:
 
 CMakeFiles/tests.dir/__/src/structure_donnee/tree/Tree.cpp.o:
+
+CMakeFiles/tests.dir/__/src/structure_donnee/tree/AVLTree.cpp.o:
+
+CMakeFiles/tests.dir/AVLTreeTest.cpp.o:
 
 ../lib/libgtest.a:
 
