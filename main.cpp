@@ -16,6 +16,7 @@
 #include "src/structure_donnee/queue/QueueExercise.cpp"
 #include "src/structure_donnee/hash_table/hashTableExercise.h"
 #include "src/structure_donnee/tree/Tree.h"
+#include "src/structure_donnee/tree/AVLTree.h"
 int main() {
     /*
     std::vector<std::vector<std::string>> vector = {
@@ -27,7 +28,7 @@ int main() {
     affichage_matrice_v3(vector);
 */
 
-Tree tree;
+AVLTree tree;
     tree.insert(5);
     tree.insert(4);
     tree.insert(3);
@@ -38,8 +39,8 @@ Tree tree;
     //std::cout<<tree.find(6)<<std::endl;
     //std::cout<<tree.find(1)<<std::endl;
 
-    tree.printNodeDistanceOfK(2);
 
+tree.printTree();
 
 
     return 0;

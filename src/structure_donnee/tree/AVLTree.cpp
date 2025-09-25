@@ -11,6 +11,7 @@
 */
 
 #include "AVLTree.h"
+#include <iostream>
 
 AVLTree::AVLTree() : root(nullptr) {
 }
@@ -30,17 +31,18 @@ void AVLTree::insert(std::shared_ptr<Node> &root, std::shared_ptr<Node> &toAdd) 
     if (root->value > toAdd->value) {
         if (!root->left) {
             root->left = toAdd;
-            return;
+        } else {
+            insert(root->left, toAdd);
         }
-        insert(root->left, toAdd);
     }
     if (root->value < toAdd->value) {
         if (!root->right) {
             root->right = toAdd;
-            return;
+        }else {
+            insert(root->right, toAdd);
         }
-        insert(root->right, toAdd);
     }
+    updateHeight(root);
 }
 
 bool AVLTree::find(int value) const {
@@ -61,4 +63,38 @@ bool AVLTree::find(int value) const {
             curent = curent->left;
         }
     }
+}
+
+void AVLTree::printTree() const {
+    printTree(root);
+
+}
+
+void AVLTree::printTree(const std::shared_ptr<Node> &root) const {
+    if (root == nullptr) {
+        return;
+    }
+
+    std::cout<<root->toString()<<std::endl;
+
+    printTree(root->left);
+    printTree(root->right);
+}
+
+void AVLTree::updateHeight(std::shared_ptr<Node> &root) {
+    if (!root->left && !root->right) {
+        return;
+    }
+    if (!root->left && root->right) {
+        root->height = root->right->height + 1;
+        return;
+    }
+    if (root->left && !root->right) {
+        root->height = root->left->height + 1;
+        return;
+    }
+
+
+    root->height = std::max(root->left->height, root->right->height) + 1;
+
 }

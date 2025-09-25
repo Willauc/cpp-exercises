@@ -24,18 +24,21 @@ private:
         int value;
         std::shared_ptr<Node> left;
         std::shared_ptr<Node> right;
+        int height = 0;
 
         explicit Node(int p_value) : value(p_value), left(nullptr), right(nullptr) {
         }
 
         std::string toString() const {
-            return "Value = " + std::to_string(value);
+            return "Value = " + std::to_string(value) + " Height = " + std::to_string(height);
         }
     };
 
     std::shared_ptr<Node> root;
 
     void insert(std::shared_ptr<Node> &root, std::shared_ptr<Node> &toAdd);
+    void printTree(const std::shared_ptr<Node> &root) const;
+    void updateHeight(std::shared_ptr<Node> &root);
 
 public:
     AVLTree();
@@ -45,6 +48,8 @@ public:
     void insert(int value);
 
     bool find(int value) const;
+
+    void printTree() const;
 };
 
 
