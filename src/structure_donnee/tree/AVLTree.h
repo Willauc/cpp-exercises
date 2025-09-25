@@ -14,6 +14,7 @@
 #define CPP_EXERCISES_AVLTREE_H
 
 #include <memory>
+#include <string>
 
 
 class AVLTree {
@@ -25,6 +26,10 @@ private:
         std::shared_ptr<Node> right;
 
         explicit Node(int p_value) : value(p_value), left(nullptr), right(nullptr) {
+        }
+
+        std::string toString() const {
+            return "Value = " + std::to_string(value);
         }
     };
 
