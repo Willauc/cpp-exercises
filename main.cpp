@@ -9,6 +9,7 @@
 */
 #include <iostream>
 #include <vector>
+#include <string>
 #include "src/structure_donnee/link_list/Link_List.h"
 #include "src/affichage_matrice.h"
 #include "src/structure_donnee/stack/Expression.h"
@@ -17,30 +18,18 @@
 #include "src/structure_donnee/hash_table/hashTableExercise.h"
 #include "src/structure_donnee/tree/Tree.h"
 #include "src/structure_donnee/tree/AVLTree.h"
+#include "src/leetCode/stringProbleme.h"
+
+using namespace std;
 int main() {
-    /*
-    std::vector<std::vector<std::string>> vector = {
-        {"1", "2", "3", "4"},
-        {"x", "y", "z",},
-        {"9", "8", "7", "6"}
-    };
+    string word1 = "abc";
+    string word2 = "def";
 
-    affichage_matrice_v3(vector);
-*/
+    auto str = new stringProbleme();
 
-AVLTree tree;
-    tree.insert(5);
-    tree.insert(4);
-    tree.insert(3);
-    tree.insert(6);
-    tree.insert(8);
-    tree.insert(7);
-    //tree.printTree();
-    //std::cout<<tree.find(6)<<std::endl;
-    //std::cout<<tree.find(1)<<std::endl;
+    string newWord = str->mergeAlternately(word1, word2);
 
-
-tree.printTree();
+    cout << newWord << endl;
 
 
     return 0;

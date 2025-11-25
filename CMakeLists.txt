@@ -24,6 +24,8 @@ add_executable(main
         src/structure_donnee/tree/Tree.h
         src/structure_donnee/tree/AVLTree.cpp
         src/structure_donnee/tree/AVLTree.h
+        src/leetCode/stringProbleme.cpp
+        src/leetCode/stringProbleme.h
 
 
 )
