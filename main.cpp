@@ -22,12 +22,12 @@
 
 using namespace std;
 int main() {
-    string word1 = "abc";
-    string word2 = "def";
+    string word1 = "ABABABAB";
+    string word2 = "ABAB";
 
     auto str = new stringProbleme();
 
-    string newWord = str->mergeAlternately(word1, word2);
+    string newWord = str->gcdOfStrings(word1, word2);
 
     cout << newWord << endl;
 

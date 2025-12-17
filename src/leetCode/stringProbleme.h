@@ -10,6 +10,8 @@ using namespace std;
 class stringProbleme {
 public:
     string mergeAlternately(string word1, string word2);
+    string mergeAlternatelyBest(string word1, string word2);
+    string gcdOfStrings(string str1, string str2);
 };
 
 
